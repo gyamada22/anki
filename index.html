@@ -35,7 +35,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .screen { display: none; }
 .screen.active { display: block; }
 
-/* TOP BAR */
 .deck-info { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; flex-wrap: wrap; }
 .pill { background: var(--surface2); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; font-size: 12px; color: var(--muted); }
 .pill.wrong-pill { border-color: #7f1d1d; color: var(--red); }
@@ -46,7 +45,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .prog-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; transition: width 0.4s ease; }
 .prog-label { font-size: 12px; color: var(--muted); font-family: var(--mono); white-space: nowrap; }
 
-/* CARD FRONT */
 .card-front-box {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -58,7 +56,7 @@ nav button.active { background: var(--surface2); color: var(--text); }
   margin-bottom: 1rem;
 }
 .card-cat { font-size: 11px; font-weight: 500; color: var(--accent); font-family: var(--mono); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-.card-term { font-family: var(--mono); font-size: 32px; font-weight: 600; color: var(--text); margin-bottom: 2rem; text-align: center; }
+.card-term { font-family: var(--mono); font-size: 28px; font-weight: 600; color: var(--text); margin-bottom: 2rem; text-align: center; line-height: 1.4; }
 .user-answer-label { font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; align-self: flex-start; width: 100%; }
 .user-answer-box {
   width: 100%;
@@ -77,7 +75,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 }
 .user-answer-box:focus { border-color: var(--accent); }
 
-/* CARD BACK */
 .card-back-box {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -117,7 +114,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
   line-height: 1.8;
 }
 
-/* BUTTONS */
 .btn-reveal { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; margin-bottom: 8px; }
 .btn-reveal:hover { background: var(--accent2); }
 .answer-btns { display: flex; gap: 10px; }
@@ -129,7 +125,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-skip:hover { color: var(--text); border-color: var(--muted); }
 .row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 
-/* SCORE */
 .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
 .score-big { font-family: var(--mono); font-size: 64px; font-weight: 600; color: var(--accent2); line-height: 1; }
 .score-label { font-size: 14px; color: var(--muted); margin-top: 8px; margin-bottom: 2rem; }
@@ -142,7 +137,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-primary { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .btn-primary:hover { background: var(--accent2); }
 
-/* LIST */
 .list-head { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
 .spacer { flex: 1; }
 .card-list { display: flex; flex-direction: column; gap: 8px; }
@@ -156,7 +150,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .cr-del { background: transparent; border: none; color: var(--muted); font-size: 18px; cursor: pointer; padding: 0 4px; flex-shrink: 0; line-height: 1; transition: color 0.12s; }
 .cr-del:hover { color: var(--red); }
 
-/* FORM */
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
 .field { margin-bottom: 1.25rem; }
 .field label { display: block; font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
@@ -167,7 +160,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .save-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .save-btn:hover { background: var(--accent2); }
 
-/* MODAL */
 .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 1rem; }
 .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; width: 100%; max-width: 520px; }
 .modal h3 { font-size: 15px; font-weight: 500; margin-bottom: 1.25rem; color: var(--text); }
@@ -221,15 +213,15 @@ nav button.active { background: var(--surface2); color: var(--text); }
   <!-- ADD -->
   <div id="screen-add" class="screen">
     <div class="form-card">
-      <div class="field"><label>Termo / Método</label><input type="text" id="f-term" placeholder=".reduce(), new Map(), async/await…" /></div>
+      <div class="field"><label>Termo / Pergunta</label><input type="text" id="f-term" placeholder=".reduce(), new Map(), async/await…" /></div>
       <div class="field"><label>Categoria</label>
         <select id="f-cat">
           <option>Array</option><option>String</option><option>JavaScript</option>
           <option>Object</option><option>DOM</option><option>Async</option>
-          <option>React</option><option>CSS</option><option>Geral</option>
+          <option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option>
         </select>
       </div>
-      <div class="field"><label>Explicação</label><textarea id="f-def" placeholder="O que faz, em uma frase simples…"></textarea></div>
+      <div class="field"><label>Explicação / Resposta</label><textarea id="f-def" placeholder="O que faz, em uma frase simples…"></textarea></div>
       <div class="field"><label>Exemplo de código</label><textarea id="f-ex" placeholder='["a","b"].join("-") → "a-b"' style="font-family:var(--mono);font-size:13px"></textarea></div>
       <button class="save-btn" onclick="addCard()">Salvar card</button>
     </div>
@@ -241,15 +233,15 @@ nav button.active { background: var(--surface2); color: var(--text); }
   <div class="modal">
     <h3>Editar card</h3>
     <input type="hidden" id="e-id" />
-    <div class="field"><label>Termo / Método</label><input type="text" id="e-term" /></div>
+    <div class="field"><label>Termo / Pergunta</label><input type="text" id="e-term" /></div>
     <div class="field"><label>Categoria</label>
       <select id="e-cat">
         <option>Array</option><option>String</option><option>JavaScript</option>
         <option>Object</option><option>DOM</option><option>Async</option>
-        <option>React</option><option>CSS</option><option>Geral</option>
+        <option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option>
       </select>
     </div>
-    <div class="field"><label>Explicação</label><textarea id="e-def"></textarea></div>
+    <div class="field"><label>Explicação / Resposta</label><textarea id="e-def"></textarea></div>
     <div class="field"><label>Exemplo de código</label><textarea id="e-ex" style="font-family:var(--mono);font-size:13px"></textarea></div>
     <div class="modal-actions">
       <button class="modal-cancel" onclick="closeEdit()">Cancelar</button>
@@ -261,31 +253,190 @@ nav button.active { background: var(--surface2); color: var(--text); }
 <div class="toast" id="toast"></div>
 
 <script>
-const KEY = 'devflash_v2';
+// Versão v3 — força reset com os novos cards
+const KEY = 'devflash_v3';
+
+// Fisher-Yates shuffle — garantia de aleatoriedade real
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 const DEFAULT_CARDS = [
-  {id:1,  term:'.join()',          cat:'Array',      def:'Junta os elementos do array em uma string usando um separador.',             ex:'["a","b","c"].join("-")  →  "a-b-c"\n["a","b","c"].join("")   →  "abc"'},
-  {id:2,  term:'.map()',           cat:'Array',      def:'Transforma cada elemento e retorna um novo array.',                          ex:'[1,2,3].map(x => x * 2)       →  [2,4,6]\n["a","b"].map(x => x.toUpperCase())  →  ["A","B"]'},
-  {id:3,  term:'.filter()',        cat:'Array',      def:'Retorna novo array só com os elementos que passam no teste.',                ex:'[1,2,3,4].filter(x => x > 2)  →  [3,4]'},
-  {id:4,  term:'.find()',          cat:'Array',      def:'Retorna o primeiro elemento que passa no teste (ou undefined).',             ex:'[1,2,3].find(x => x > 1)           →  2\n[{id:1},{id:2}].find(x => x.id===2)  →  {id:2}'},
-  {id:5,  term:'.reduce()',        cat:'Array',      def:'Acumula todos os elementos em um único valor. Recebe (acumulador, item).',   ex:'[1,2,3].reduce((acc,x) => acc + x, 0)  →  6'},
-  {id:6,  term:'.includes()',      cat:'Array',      def:'Verifica se o array contém determinado valor.',                             ex:'[1,2,3].includes(2)  →  true\n[1,2,3].includes(9)  →  false'},
-  {id:7,  term:'.some()',          cat:'Array',      def:'Retorna true se pelo menos um elemento passar no teste.',                   ex:'[1,2,3].some(x => x > 2)   →  true\n[1,2,3].some(x => x > 10)  →  false'},
-  {id:8,  term:'.every()',         cat:'Array',      def:'Retorna true somente se TODOS os elementos passarem no teste.',             ex:'[1,2,3].every(x => x > 0)  →  true\n[1,2,3].every(x => x > 1)  →  false'},
-  {id:9,  term:'.flat()',          cat:'Array',      def:'Achata arrays aninhados em um único array.',                                ex:'[[1,2],[3,4]].flat()         →  [1,2,3,4]\n[1,[2,[3]]].flat(Infinity)  →  [1,2,3]'},
-  {id:10, term:'.split()',         cat:'String',     def:'Divide uma string em array usando um separador.',                           ex:'"a,b,c".split(",")  →  ["a","b","c"]\n"hello".split("")   →  ["h","e","l","l","o"]'},
-  {id:11, term:'.toUpperCase()',   cat:'String',     def:'Converte a string inteira para letras maiúsculas.',                         ex:'"hello".toUpperCase()  →  "HELLO"'},
-  {id:12, term:'.toLowerCase()',   cat:'String',     def:'Converte a string inteira para letras minúsculas.',                         ex:'"HELLO".toLowerCase()  →  "hello"'},
-  {id:13, term:'.trim()',          cat:'String',     def:'Remove espaços em branco do início e do fim da string.',                   ex:'"  oi mundo  ".trim()  →  "oi mundo"'},
-  {id:14, term:'.replace()',       cat:'String',     def:'Substitui a primeira ocorrência encontrada por outro valor.',               ex:'"oi mundo".replace("mundo","JS")  →  "oi JS"'},
-  {id:15, term:'.slice()',         cat:'String',     def:'Recorta parte da string pelos índices (início, fim).',                     ex:'"javascript".slice(0,4)  →  "java"\n"javascript".slice(4)   →  "script"'},
-  {id:16, term:'Object.keys()',    cat:'Object',     def:'Retorna um array com todas as chaves (propriedades) do objeto.',            ex:'Object.keys({a:1, b:2})    →  ["a","b"]'},
-  {id:17, term:'Object.values()',  cat:'Object',     def:'Retorna um array com todos os valores do objeto.',                         ex:'Object.values({a:1, b:2})  →  [1,2]'},
-  {id:18, term:'Object.entries()', cat:'Object',     def:'Retorna array de pares [chave, valor] do objeto.',                         ex:'Object.entries({a:1, b:2})  →  [["a",1],["b",2]]'},
-  {id:19, term:'spread  ...',      cat:'JavaScript', def:'Copia ou combina arrays/objetos sem mutar o original.',                    ex:'[...arr1, ...arr2]          // combina arrays\n{...obj1, extra: 99}       // combina objetos'},
-  {id:20, term:'new Set()',        cat:'JavaScript', def:'Coleção de valores únicos. Remove duplicatas de um array.',                ex:'[...new Set([1,1,2,3])]   →  [1,2,3]\nnew Set([1,2,2,3]).size   →  3'},
-  {id:21, term:'async / await',    cat:'Async',      def:'Pausa a função até a Promise resolver. Torna código assíncrono legível.',  ex:'async function buscar() {\n  const res  = await fetch(url);\n  const data = await res.json();\n  return data;\n}'},
-  {id:22, term:'Promise.all()',    cat:'Async',      def:'Executa várias Promises ao mesmo tempo e espera todas terminarem.',        ex:'const [a, b] = await Promise.all([\n  fetch(url1),\n  fetch(url2)\n]);'},
+  // ── Array ──────────────────────────────────────────────────────────────────
+  {id:1,  term:'.join()',
+   cat:'Array',
+   def:'Junta os elementos do array em uma string usando um separador.',
+   ex:'["a","b","c"].join("-")  →  "a-b-c"\n["a","b","c"].join("")   →  "abc"'},
+
+  {id:2,  term:'.map()',
+   cat:'Array',
+   def:'Transforma cada elemento e retorna um novo array.',
+   ex:'[1,2,3].map(x => x * 2)            →  [2,4,6]\n["a","b"].map(x => x.toUpperCase())  →  ["A","B"]'},
+
+  {id:3,  term:'.filter()',
+   cat:'Array',
+   def:'Retorna novo array só com os elementos que passam no teste.',
+   ex:'[1,2,3,4].filter(x => x > 2)  →  [3,4]'},
+
+  {id:4,  term:'.find()',
+   cat:'Array',
+   def:'Retorna o primeiro elemento que passa no teste (ou undefined).',
+   ex:'[1,2,3].find(x => x > 1)           →  2\n[{id:1},{id:2}].find(x => x.id===2)  →  {id:2}'},
+
+  {id:5,  term:'.reduce()',
+   cat:'Array',
+   def:'Acumula todos os elementos em um único valor. Recebe (acumulador, item).',
+   ex:'[1,2,3].reduce((acc,x) => acc + x, 0)  →  6'},
+
+  {id:6,  term:'.includes()',
+   cat:'Array',
+   def:'Verifica se o array contém determinado valor.',
+   ex:'[1,2,3].includes(2)  →  true\n[1,2,3].includes(9)  →  false'},
+
+  {id:7,  term:'.some()',
+   cat:'Array',
+   def:'Retorna true se pelo menos um elemento passar no teste.',
+   ex:'[1,2,3].some(x => x > 2)   →  true\n[1,2,3].some(x => x > 10)  →  false'},
+
+  {id:8,  term:'.every()',
+   cat:'Array',
+   def:'Retorna true somente se TODOS os elementos passarem no teste.',
+   ex:'[1,2,3].every(x => x > 0)  →  true\n[1,2,3].every(x => x > 1)  →  false'},
+
+  {id:9,  term:'.flat()',
+   cat:'Array',
+   def:'Achata arrays aninhados em um único array.',
+   ex:'[[1,2],[3,4]].flat()         →  [1,2,3,4]\n[1,[2,[3]]].flat(Infinity)  →  [1,2,3]'},
+
+  {id:10, term:'.push()',
+   cat:'Array',
+   def:'Adiciona um ou mais elementos ao FINAL do array. Retorna o novo length.',
+   ex:'const arr = [1, 2];\narr.push(3);      // arr → [1, 2, 3], retorna 3\narr.push(4, 5);  // arr → [1, 2, 3, 4, 5]'},
+
+  {id:11, term:'Preciso adicionar um produto ao FINAL de um carrinho de compras (array) quando o usuário clicar em "Comprar". Qual método uso?',
+   cat:'Array',
+   def:'.push()',
+   ex:''},
+
+  {id:12, term:'.unshift()',
+   cat:'Array',
+   def:'Adiciona um ou mais elementos no INÍCIO do array. Retorna o novo length.',
+   ex:'const arr = [2, 3];\narr.unshift(1);      // arr → [1, 2, 3], retorna 3\narr.unshift(-1, 0);  // arr → [-1, 0, 1, 2, 3]'},
+
+  {id:13, term:'Preciso adicionar um ou mais elementos no INÍCIO de um array existente e quero que o original seja alterado. Qual método uso?',
+   cat:'Array',
+   def:'.unshift()',
+   ex:''},
+
+  {id:14, term:'.reverse()',
+   cat:'Array',
+   def:'Inverte a ordem dos elementos do array in-place. Modifica o original e retorna None/undefined.',
+   ex:'const arr = [1, 2, 3];\narr.reverse();   // arr → [3, 2, 1]\n\n// Armadilha:\nconst r = arr.reverse();\nconsole.log(r);  // undefined ❌ — use arr diretamente'},
+
+  {id:15, term:'Tenho uma lista de tarefas do mais antigo ao mais recente e quero exibi-las do mais recente ao mais antigo, alterando a própria lista. Qual método uso?',
+   cat:'Array',
+   def:'.reverse()',
+   ex:''},
+
+  // ── String ─────────────────────────────────────────────────────────────────
+  {id:16, term:'.split()',
+   cat:'String',
+   def:'Divide uma string em um array usando um separador. Sem separador → array com a string inteira.',
+   ex:'"a,b,c".split(",")   →  ["a","b","c"]\n"hello".split("")    →  ["h","e","l","l","o"]\n"2024-04-28".split("-")  →  ["2024","04","28"]'},
+
+  {id:17, term:'Recebo a string "2024-04-28" e preciso extrair o ano, mês e dia separadamente em um array. Qual método uso?',
+   cat:'String',
+   def:'.split("-")  →  ["2024", "04", "28"]',
+   ex:''},
+
+  {id:18, term:'.join() — String',
+   cat:'String',
+   def:'Método de STRING que une elementos de um array em uma única string, usando a string como separador.',
+   ex:'["João","Maria","Pedro"].join(", ")  →  "João, Maria, Pedro"\n["a","b","c"].join("-")              →  "a-b-c"\n["a","b","c"].join("")               →  "abc"'},
+
+  {id:19, term:'Tenho o array ["João","Maria","Pedro"] e preciso gerar a string "João, Maria, Pedro". Qual método uso?',
+   cat:'String',
+   def:'", ".join(array)  →  array.join(", ")',
+   ex:''},
+
+  {id:20, term:'.toUpperCase()',
+   cat:'String',
+   def:'Converte a string inteira para letras maiúsculas.',
+   ex:'"hello".toUpperCase()  →  "HELLO"'},
+
+  {id:21, term:'.toLowerCase()',
+   cat:'String',
+   def:'Converte a string inteira para letras minúsculas.',
+   ex:'"HELLO".toLowerCase()  →  "hello"'},
+
+  {id:22, term:'.trim()',
+   cat:'String',
+   def:'Remove espaços em branco do início e do fim da string.',
+   ex:'"  oi mundo  ".trim()  →  "oi mundo"'},
+
+  {id:23, term:'.replace()',
+   cat:'String',
+   def:'Substitui a primeira ocorrência encontrada por outro valor.',
+   ex:'"oi mundo".replace("mundo","JS")  →  "oi JS"'},
+
+  {id:24, term:'.slice()',
+   cat:'String',
+   def:'Recorta parte da string pelos índices (início, fim).',
+   ex:'"javascript".slice(0,4)  →  "java"\n"javascript".slice(4)   →  "script"'},
+
+  // ── Object ─────────────────────────────────────────────────────────────────
+  {id:25, term:'Object.keys()',
+   cat:'Object',
+   def:'Retorna um array com todas as chaves (propriedades) do objeto.',
+   ex:'Object.keys({a:1, b:2})    →  ["a","b"]'},
+
+  {id:26, term:'Object.values()',
+   cat:'Object',
+   def:'Retorna um array com todos os valores do objeto.',
+   ex:'Object.values({a:1, b:2})  →  [1,2]'},
+
+  {id:27, term:'Object.entries()',
+   cat:'Object',
+   def:'Retorna array de pares [chave, valor] do objeto.',
+   ex:'Object.entries({a:1, b:2})  →  [["a",1],["b",2]]'},
+
+  // ── JavaScript ─────────────────────────────────────────────────────────────
+  {id:28, term:'spread  ...',
+   cat:'JavaScript',
+   def:'Copia ou combina arrays/objetos sem mutar o original.',
+   ex:'[...arr1, ...arr2]        // combina arrays\n{...obj1, extra: 99}      // combina objetos'},
+
+  {id:29, term:'new Set()',
+   cat:'JavaScript',
+   def:'Coleção de valores únicos. Remove duplicatas de um array.',
+   ex:'[...new Set([1,1,2,3])]   →  [1,2,3]\nnew Set([1,2,2,3]).size   →  3'},
+
+  // ── Async ──────────────────────────────────────────────────────────────────
+  {id:30, term:'async / await',
+   cat:'Async',
+   def:'Pausa a função até a Promise resolver. Torna código assíncrono legível.',
+   ex:'async function buscar() {\n  const res  = await fetch(url);\n  const data = await res.json();\n  return data;\n}'},
+
+  {id:31, term:'Promise.all()',
+   cat:'Async',
+   def:'Executa várias Promises ao mesmo tempo e espera todas terminarem.',
+   ex:'const [a, b] = await Promise.all([\n  fetch(url1),\n  fetch(url2)\n]);'},
+
+  // ── Algoritmo ──────────────────────────────────────────────────────────────
+  {id:32, term:'Two Pointers — reverter string/lista',
+   cat:'Algoritmo',
+   def:'Usa dois índices (esq e dir) que caminham um em direção ao outro trocando elementos. O(n) tempo, O(1) espaço.',
+   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++;\n    dir--;\n  }\n  return s.join("");\n}\n\nreverter("Python")  →  "nohtyP"'},
+
+  {id:33, term:'Implemente uma função que reverta uma string em JS sem usar .reverse() direto, trocando caracteres com dois índices.',
+   cat:'Algoritmo',
+   def:'Two Pointers',
+   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++;\n    dir--;\n  }\n  return s.join("");\n}'},
 ];
 
 let cards = [], queue = [], wrongList = [], qi = 0, score = {ok:0,nok:0};
@@ -320,7 +471,7 @@ function setupStudy() {
   fillCatSels();
   const cat = document.getElementById('study-cat-sel').value;
   const pool = cat==='Todas' ? [...cards] : cards.filter(c=>c.cat===cat);
-  queue = pool.sort(()=>Math.random()-0.5);
+  queue = shuffle(pool); // Fisher-Yates — aleatoriedade real
   wrongList = []; qi = 0; score = {ok:0,nok:0};
   updateProgress();
   renderStudyMain();
@@ -352,7 +503,7 @@ function renderStudyMain() {
   el.innerHTML = `
     <div class="card-front-box">
       <div class="card-cat">${c.cat}</div>
-      <div class="card-term">${c.term}</div>
+      <div class="card-term">${esc(c.term)}</div>
       <div class="user-answer-label">O que você acha que faz?</div>
       <textarea class="user-answer-box" id="user-ans" placeholder="Escreva com suas palavras…" onkeydown="if(event.ctrlKey && event.key==='Enter') reveal()"></textarea>
     </div>
@@ -362,8 +513,8 @@ function renderStudyMain() {
       <div class="back-user-answer" id="back-user-ans"></div>
       <div class="divider"></div>
       <div class="back-section-label">Resposta correta</div>
-      <div class="back-term">${c.term}</div>
-      <div class="back-def">${c.def}</div>
+      <div class="back-term">${esc(c.term)}</div>
+      <div class="back-def">${esc(c.def)}</div>
       ${c.ex ? `<div class="back-example">${esc(c.ex)}</div>` : ''}
     </div>
 
@@ -401,7 +552,7 @@ function answer(ok) {
   else { score.nok++; wrongList.push({...queue[qi]}); }
   qi++;
   if (qi >= queue.length && wrongList.length) {
-    queue = queue.concat(wrongList.sort(()=>Math.random()-0.5));
+    queue = queue.concat(shuffle(wrongList));
     wrongList = [];
   }
   renderStudyMain();
@@ -439,8 +590,8 @@ function renderList() {
   if (!filtered.length) { el.innerHTML = `<div class="empty-state">Nenhum card aqui.</div>`; return; }
   el.innerHTML = filtered.map(c=>`
     <div class="card-row">
-      <span class="cr-term">${c.term}</span>
-      <span class="cr-def">${c.def}</span>
+      <span class="cr-term">${esc(c.term)}</span>
+      <span class="cr-def">${esc(c.def)}</span>
       <span class="cr-cat">${c.cat}</span>
       <button class="cr-edit" onclick="editCard(${c.id})" title="Editar">✎</button>
       <button class="cr-del" onclick="del(${c.id})" title="Excluir">×</button>
