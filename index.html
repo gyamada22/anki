@@ -23,6 +23,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; }
 .wrap { max-width: 700px; margin: 0 auto; padding: 2rem 1.5rem; }
+
 header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; }
 .logo { font-family: var(--mono); font-size: 18px; color: var(--accent2); }
 .logo span { color: var(--muted); }
@@ -45,75 +46,54 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .prog-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; transition: width 0.4s ease; }
 .prog-label { font-size: 12px; color: var(--muted); font-family: var(--mono); white-space: nowrap; }
 
+/* ── CLASSIC FRONT ────────────────────────── */
 .card-front-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2.5rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 2.5rem 2rem 2rem; display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;
 }
 .card-cat { font-size: 11px; font-weight: 500; color: var(--accent); font-family: var(--mono); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-.card-term { font-family: var(--mono); font-size: 28px; font-weight: 600; color: var(--text); margin-bottom: 2rem; text-align: center; line-height: 1.4; }
+.card-term { font-family: var(--mono); font-size: 26px; font-weight: 600; color: var(--text); margin-bottom: 2rem; text-align: center; line-height: 1.4; }
 .user-answer-label { font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; align-self: flex-start; width: 100%; }
-.user-answer-box {
-  width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--text);
-  resize: vertical;
-  min-height: 90px;
-  outline: none;
-  transition: border-color 0.15s;
-  line-height: 1.6;
-}
+.user-answer-box { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-family: var(--sans); font-size: 14px; color: var(--text); resize: vertical; min-height: 80px; outline: none; transition: border-color 0.15s; line-height: 1.6; }
 .user-answer-box:focus { border-color: var(--accent); }
 
-.card-back-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  margin-bottom: 1rem;
-  display: none;
-}
+/* ── CLASSIC BACK ─────────────────────────── */
+.card-back-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 1rem; display: none; }
 .card-back-box.visible { display: block; }
 .back-section-label { font-size: 11px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-.back-user-answer {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-style: italic;
-}
+.back-user-answer { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; white-space: pre-wrap; word-break: break-word; font-style: italic; }
 .divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
 .back-term { font-family: var(--mono); font-size: 15px; color: var(--accent2); margin-bottom: 8px; }
 .back-def { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 1rem; }
-.back-example {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 16px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent2);
-  white-space: pre-wrap;
-  word-break: break-all;
-  line-height: 1.8;
-}
+.back-example { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-family: var(--mono); font-size: 13px; color: var(--accent2); white-space: pre-wrap; word-break: break-all; line-height: 1.8; }
 
+/* ── STRUCTURED FRONT ─────────────────────── */
+.card-front-box.structured { align-items: stretch; padding: 1.75rem; }
+.struct-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+.struct-title { font-family: var(--mono); font-size: 30px; font-weight: 600; color: var(--text); text-align: center; }
+.struct-fields { display: flex; flex-direction: column; gap: 0.85rem; }
+.struct-field { display: flex; flex-direction: column; gap: 6px; }
+.struct-label { font-size: 10px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 6px; }
+.struct-label-num { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 4px; background: var(--surface2); border: 1px solid var(--border); font-size: 9px; color: var(--accent2); flex-shrink: 0; }
+.struct-input { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font-family: var(--mono); font-size: 13px; color: var(--text); outline: none; transition: border-color 0.15s; width: 100%; }
+.struct-input:focus { border-color: var(--accent); }
+.struct-context { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 12px; color: var(--accent2); margin-bottom: 4px; }
+
+/* ── STRUCTURED BACK ──────────────────────── */
+.struct-back-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1rem; display: none; }
+.struct-back-box.visible { display: block; }
+.struct-back-row { padding: 1rem 1.5rem; }
+.struct-back-row + .struct-back-row { border-top: 1px solid var(--border); }
+.struct-back-label { font-size: 10px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.struct-back-user { background: var(--surface2); border-radius: 6px; padding: 7px 10px; font-size: 13px; color: var(--muted); font-style: italic; margin-bottom: 6px; white-space: pre-wrap; word-break: break-word; }
+.struct-back-correct { padding: 7px 10px 7px 14px; font-size: 13px; color: var(--green); border-left: 2px solid var(--green); line-height: 1.5; }
+.struct-back-correct-code { background: var(--surface2); border-radius: 8px; border-left: 2px solid var(--green); padding: 10px 14px; font-family: var(--mono); font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; line-height: 1.6; }
+.struct-code { color: var(--accent2); }
+.struct-arrow { color: var(--muted); }
+.struct-output { color: var(--green); }
+.struct-context-back { background: var(--surface2); border-radius: 6px; padding: 6px 10px; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+
+/* ── BUTTONS ──────────────────────────────── */
 .btn-reveal { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; margin-bottom: 8px; }
 .btn-reveal:hover { background: var(--accent2); }
 .answer-btns { display: flex; gap: 10px; }
@@ -125,6 +105,7 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-skip:hover { color: var(--text); border-color: var(--muted); }
 .row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 
+/* ── SCORE ────────────────────────────────── */
 .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
 .score-big { font-family: var(--mono); font-size: 64px; font-weight: 600; color: var(--accent2); line-height: 1; }
 .score-label { font-size: 14px; color: var(--muted); margin-top: 8px; margin-bottom: 2rem; }
@@ -137,12 +118,14 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-primary { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .btn-primary:hover { background: var(--accent2); }
 
+/* ── LIST ─────────────────────────────────── */
 .list-head { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
 .spacer { flex: 1; }
 .card-list { display: flex; flex-direction: column; gap: 8px; }
-.card-row { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 12px; transition: border-color 0.15s; }
+.card-row { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 10px; transition: border-color 0.15s; }
 .card-row:hover { border-color: var(--accent); }
-.cr-term { font-family: var(--mono); font-size: 13px; color: var(--accent2); min-width: 130px; flex-shrink: 0; padding-top: 2px; }
+.cr-type { font-size: 9px; color: var(--muted); font-family: var(--mono); flex-shrink: 0; padding-top: 3px; text-transform: uppercase; letter-spacing: 0.5px; min-width: 48px; }
+.cr-term { font-family: var(--mono); font-size: 13px; color: var(--accent2); min-width: 110px; flex-shrink: 0; padding-top: 2px; }
 .cr-def { font-size: 13px; color: var(--muted); line-height: 1.5; flex: 1; }
 .cr-cat { font-size: 11px; color: var(--accent); font-family: var(--mono); flex-shrink: 0; padding-top: 3px; }
 .cr-edit { background: transparent; border: none; color: var(--muted); font-size: 14px; cursor: pointer; padding: 0 4px; flex-shrink: 0; transition: color 0.12s; }
@@ -150,7 +133,12 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .cr-del { background: transparent; border: none; color: var(--muted); font-size: 18px; cursor: pointer; padding: 0 4px; flex-shrink: 0; line-height: 1; transition: color 0.12s; }
 .cr-del:hover { color: var(--red); }
 
+/* ── ADD FORM ─────────────────────────────── */
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+.form-section-title { font-size: 11px; color: var(--accent); font-family: var(--mono); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.type-toggle { display: flex; gap: 6px; margin-bottom: 1.5rem; }
+.type-btn { flex: 1; padding: 10px 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-family: var(--mono); font-size: 11px; color: var(--muted); cursor: pointer; transition: all 0.15s; text-align: center; line-height: 1.5; }
+.type-btn.active { background: rgba(124,106,247,0.1); border-color: var(--accent); color: var(--accent2); }
 .field { margin-bottom: 1.25rem; }
 .field label { display: block; font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .field input, .field textarea, .field select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; font-family: var(--sans); font-size: 14px; color: var(--text); outline: none; transition: border-color 0.15s; }
@@ -160,8 +148,9 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .save-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .save-btn:hover { background: var(--accent2); }
 
-.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 1rem; }
-.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; width: 100%; max-width: 520px; }
+/* ── MODAL ────────────────────────────────── */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 1rem; overflow-y: auto; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; }
 .modal h3 { font-size: 15px; font-weight: 500; margin-bottom: 1.25rem; color: var(--text); }
 .modal-actions { display: flex; gap: 8px; margin-top: 1.25rem; }
 .modal-actions button { flex: 1; padding: 11px; border-radius: 10px; font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer; }
@@ -213,36 +202,58 @@ nav button.active { background: var(--surface2); color: var(--text); }
   <!-- ADD -->
   <div id="screen-add" class="screen">
     <div class="form-card">
-      <div class="field"><label>Termo / Pergunta</label><input type="text" id="f-term" placeholder=".reduce(), new Map(), async/await…" /></div>
-      <div class="field"><label>Categoria</label>
-        <select id="f-cat">
-          <option>Array</option><option>String</option><option>JavaScript</option>
-          <option>Object</option><option>DOM</option><option>Async</option>
-          <option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option>
-        </select>
+      <div class="form-section-title">Tipo de card</div>
+      <div class="type-toggle">
+        <div class="type-btn active" id="toggle-classic" onclick="setFormType('classic')">Classic<br><span style="font-size:9px;color:inherit;opacity:.7">pergunta livre</span></div>
+        <div class="type-btn" id="toggle-structured" onclick="setFormType('structured')">Structured<br><span style="font-size:9px;color:inherit;opacity:.7">método / saída / exemplo</span></div>
       </div>
-      <div class="field"><label>Explicação / Resposta</label><textarea id="f-def" placeholder="O que faz, em uma frase simples…"></textarea></div>
-      <div class="field"><label>Exemplo de código</label><textarea id="f-ex" placeholder='["a","b"].join("-") → "a-b"' style="font-family:var(--mono);font-size:13px"></textarea></div>
+
+      <div id="form-classic">
+        <div class="field"><label>Termo / Pergunta</label><input type="text" id="f-term" placeholder=".reduce(), async/await…" /></div>
+        <div class="field"><label>Categoria</label><select id="f-cat"><option>Array</option><option>String</option><option>JavaScript</option><option>Object</option><option>DOM</option><option>Async</option><option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option></select></div>
+        <div class="field"><label>Explicação / Resposta</label><textarea id="f-def" placeholder="O que faz, em uma frase simples…"></textarea></div>
+        <div class="field"><label>Exemplo de código (opcional)</label><textarea id="f-ex" placeholder='arr.join("-") → "a-b-c"' style="font-family:var(--mono);font-size:13px"></textarea></div>
+      </div>
+
+      <div id="form-structured" style="display:none">
+        <div class="field"><label>Método (ex: .join())</label><input type="text" id="fs-term" placeholder=".join()" /></div>
+        <div class="field"><label>Categoria</label><select id="fs-cat"><option>Array</option><option>String</option><option>JavaScript</option><option>Object</option><option>DOM</option><option>Async</option><option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option></select></div>
+        <div class="field"><label>Resposta — Método</label><input type="text" id="fs-metodo" placeholder="Método de array" /></div>
+        <div class="field"><label>Resposta — Saída</label><input type="text" id="fs-saida" placeholder="string (array → string)" /></div>
+        <div class="field"><label>Contexto (variável de exemplo)</label><input type="text" id="fs-contexto" placeholder='const arr = ["maçã", "banana"]' style="font-family:var(--mono);font-size:13px" /></div>
+        <div class="field"><label>Código correto</label><input type="text" id="fs-codigo" placeholder='arr.join(",")' style="font-family:var(--mono);font-size:13px" /></div>
+        <div class="field"><label>Output correto</label><input type="text" id="fs-output" placeholder='"maçã,banana"' style="font-family:var(--mono);font-size:13px" /></div>
+      </div>
+
       <button class="save-btn" onclick="addCard()">Salvar card</button>
     </div>
   </div>
 </div>
 
-<!-- MODAL EDITAR -->
+<!-- EDIT MODAL -->
 <div class="modal-bg" id="edit-modal" style="display:none" onclick="if(event.target===this)closeEdit()">
   <div class="modal">
     <h3>Editar card</h3>
     <input type="hidden" id="e-id" />
-    <div class="field"><label>Termo / Pergunta</label><input type="text" id="e-term" /></div>
-    <div class="field"><label>Categoria</label>
-      <select id="e-cat">
-        <option>Array</option><option>String</option><option>JavaScript</option>
-        <option>Object</option><option>DOM</option><option>Async</option>
-        <option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option>
-      </select>
+    <input type="hidden" id="e-type" />
+
+    <div id="edit-classic">
+      <div class="field"><label>Termo / Pergunta</label><input type="text" id="e-term" /></div>
+      <div class="field"><label>Categoria</label><select id="e-cat"><option>Array</option><option>String</option><option>JavaScript</option><option>Object</option><option>DOM</option><option>Async</option><option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option></select></div>
+      <div class="field"><label>Explicação / Resposta</label><textarea id="e-def"></textarea></div>
+      <div class="field"><label>Exemplo de código</label><textarea id="e-ex" style="font-family:var(--mono);font-size:13px"></textarea></div>
     </div>
-    <div class="field"><label>Explicação / Resposta</label><textarea id="e-def"></textarea></div>
-    <div class="field"><label>Exemplo de código</label><textarea id="e-ex" style="font-family:var(--mono);font-size:13px"></textarea></div>
+
+    <div id="edit-structured" style="display:none">
+      <div class="field"><label>Método</label><input type="text" id="es-term" /></div>
+      <div class="field"><label>Categoria</label><select id="es-cat"><option>Array</option><option>String</option><option>JavaScript</option><option>Object</option><option>DOM</option><option>Async</option><option>React</option><option>CSS</option><option>Algoritmo</option><option>Geral</option></select></div>
+      <div class="field"><label>Resposta — Método</label><input type="text" id="es-metodo" /></div>
+      <div class="field"><label>Resposta — Saída</label><input type="text" id="es-saida" /></div>
+      <div class="field"><label>Contexto</label><input type="text" id="es-contexto" style="font-family:var(--mono);font-size:13px" /></div>
+      <div class="field"><label>Código correto</label><input type="text" id="es-codigo" style="font-family:var(--mono);font-size:13px" /></div>
+      <div class="field"><label>Output correto</label><input type="text" id="es-output" style="font-family:var(--mono);font-size:13px" /></div>
+    </div>
+
     <div class="modal-actions">
       <button class="modal-cancel" onclick="closeEdit()">Cancelar</button>
       <button class="modal-save" onclick="saveEdit()">Salvar</button>
@@ -253,10 +264,8 @@ nav button.active { background: var(--surface2); color: var(--text); }
 <div class="toast" id="toast"></div>
 
 <script>
-// Versão v3 — força reset com os novos cards
-const KEY = 'devflash_v3';
+const KEY = 'devflash_v4';
 
-// Fisher-Yates shuffle — garantia de aleatoriedade real
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -266,187 +275,212 @@ function shuffle(arr) {
   return a;
 }
 
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
 const DEFAULT_CARDS = [
-  // ── Array ──────────────────────────────────────────────────────────────────
-  {id:1,  term:'.join()',
-   cat:'Array',
-   def:'Junta os elementos do array em uma string usando um separador.',
-   ex:'["a","b","c"].join("-")  →  "a-b-c"\n["a","b","c"].join("")   →  "abc"'},
+  // ══ STRUCTURED — Array ════════════════════════════════════
+  {id:101,type:'structured',cat:'Array',term:'.join()',
+   metodo_resp:'Método de array',
+   saida_resp:'string — converte array → string',
+   contexto:'const arr = ["maçã", "banana", "açaí"]',
+   codigo_resp:'arr.join(",")',
+   output_resp:'"maçã,banana,açaí"'},
 
-  {id:2,  term:'.map()',
-   cat:'Array',
-   def:'Transforma cada elemento e retorna um novo array.',
-   ex:'[1,2,3].map(x => x * 2)            →  [2,4,6]\n["a","b"].map(x => x.toUpperCase())  →  ["A","B"]'},
+  {id:102,type:'structured',cat:'Array',term:'.push()',
+   metodo_resp:'Método de array (mutável — altera o original)',
+   saida_resp:'number — novo length do array',
+   contexto:'const arr = ["a", "b"]',
+   codigo_resp:'arr.push("c")',
+   output_resp:'3  →  arr agora é ["a", "b", "c"]'},
 
-  {id:3,  term:'.filter()',
-   cat:'Array',
-   def:'Retorna novo array só com os elementos que passam no teste.',
-   ex:'[1,2,3,4].filter(x => x > 2)  →  [3,4]'},
+  {id:103,type:'structured',cat:'Array',term:'.unshift()',
+   metodo_resp:'Método de array (mutável — altera o original)',
+   saida_resp:'number — novo length do array',
+   contexto:'const arr = ["b", "c"]',
+   codigo_resp:'arr.unshift("a")',
+   output_resp:'3  →  arr agora é ["a", "b", "c"]'},
 
-  {id:4,  term:'.find()',
-   cat:'Array',
-   def:'Retorna o primeiro elemento que passa no teste (ou undefined).',
-   ex:'[1,2,3].find(x => x > 1)           →  2\n[{id:1},{id:2}].find(x => x.id===2)  →  {id:2}'},
+  {id:104,type:'structured',cat:'Array',term:'.reverse()',
+   metodo_resp:'Método de array (in-place — altera o original)',
+   saida_resp:'array — o próprio array invertido',
+   contexto:'const arr = [1, 2, 3, 4, 5]',
+   codigo_resp:'arr.reverse()',
+   output_resp:'[5, 4, 3, 2, 1]'},
 
-  {id:5,  term:'.reduce()',
-   cat:'Array',
-   def:'Acumula todos os elementos em um único valor. Recebe (acumulador, item).',
-   ex:'[1,2,3].reduce((acc,x) => acc + x, 0)  →  6'},
+  {id:105,type:'structured',cat:'Array',term:'.map()',
+   metodo_resp:'Método de array (imutável — retorna novo array)',
+   saida_resp:'array — novo array com elementos transformados',
+   contexto:'const arr = [1, 2, 3]',
+   codigo_resp:'arr.map(x => x * 2)',
+   output_resp:'[2, 4, 6]'},
 
-  {id:6,  term:'.includes()',
-   cat:'Array',
-   def:'Verifica se o array contém determinado valor.',
-   ex:'[1,2,3].includes(2)  →  true\n[1,2,3].includes(9)  →  false'},
+  {id:106,type:'structured',cat:'Array',term:'.filter()',
+   metodo_resp:'Método de array (imutável — retorna novo array)',
+   saida_resp:'array — só com elementos que passaram no teste',
+   contexto:'const arr = [1, 2, 3, 4, 5]',
+   codigo_resp:'arr.filter(x => x > 2)',
+   output_resp:'[3, 4, 5]'},
 
-  {id:7,  term:'.some()',
-   cat:'Array',
-   def:'Retorna true se pelo menos um elemento passar no teste.',
-   ex:'[1,2,3].some(x => x > 2)   →  true\n[1,2,3].some(x => x > 10)  →  false'},
+  {id:107,type:'structured',cat:'Array',term:'.reduce()',
+   metodo_resp:'Método de array (imutável — acumula em um valor)',
+   saida_resp:'any — o valor acumulado ao final',
+   contexto:'const arr = [1, 2, 3, 4]',
+   codigo_resp:'arr.reduce((acc, x) => acc + x, 0)',
+   output_resp:'10'},
 
-  {id:8,  term:'.every()',
-   cat:'Array',
-   def:'Retorna true somente se TODOS os elementos passarem no teste.',
-   ex:'[1,2,3].every(x => x > 0)  →  true\n[1,2,3].every(x => x > 1)  →  false'},
+  {id:108,type:'structured',cat:'Array',term:'.find()',
+   metodo_resp:'Método de array (imutável)',
+   saida_resp:'any | undefined — primeiro elemento que passa no teste',
+   contexto:'const arr = [1, 2, 3, 4, 5]',
+   codigo_resp:'arr.find(x => x > 3)',
+   output_resp:'4'},
 
-  {id:9,  term:'.flat()',
-   cat:'Array',
-   def:'Achata arrays aninhados em um único array.',
-   ex:'[[1,2],[3,4]].flat()         →  [1,2,3,4]\n[1,[2,[3]]].flat(Infinity)  →  [1,2,3]'},
+  {id:109,type:'structured',cat:'Array',term:'.includes()',
+   metodo_resp:'Método de array (imutável)',
+   saida_resp:'boolean — true se o valor existir no array',
+   contexto:'const arr = [1, 2, 3]',
+   codigo_resp:'arr.includes(2)',
+   output_resp:'true'},
 
-  {id:10, term:'.push()',
-   cat:'Array',
-   def:'Adiciona um ou mais elementos ao FINAL do array. Retorna o novo length.',
-   ex:'const arr = [1, 2];\narr.push(3);      // arr → [1, 2, 3], retorna 3\narr.push(4, 5);  // arr → [1, 2, 3, 4, 5]'},
+  {id:110,type:'structured',cat:'Array',term:'.some()',
+   metodo_resp:'Método de array (imutável)',
+   saida_resp:'boolean — true se AO MENOS 1 elemento passar',
+   contexto:'const arr = [1, 2, 3]',
+   codigo_resp:'arr.some(x => x > 2)',
+   output_resp:'true'},
 
-  {id:11, term:'Preciso adicionar um produto ao FINAL de um carrinho de compras (array) quando o usuário clicar em "Comprar". Qual método uso?',
-   cat:'Array',
-   def:'.push()',
-   ex:''},
+  {id:111,type:'structured',cat:'Array',term:'.every()',
+   metodo_resp:'Método de array (imutável)',
+   saida_resp:'boolean — true só se TODOS passarem',
+   contexto:'const arr = [1, 2, 3]',
+   codigo_resp:'arr.every(x => x > 0)',
+   output_resp:'true'},
 
-  {id:12, term:'.unshift()',
-   cat:'Array',
-   def:'Adiciona um ou mais elementos no INÍCIO do array. Retorna o novo length.',
-   ex:'const arr = [2, 3];\narr.unshift(1);      // arr → [1, 2, 3], retorna 3\narr.unshift(-1, 0);  // arr → [-1, 0, 1, 2, 3]'},
+  {id:112,type:'structured',cat:'Array',term:'.flat()',
+   metodo_resp:'Método de array (imutável — retorna novo array)',
+   saida_resp:'array — achata arrays aninhados em um nível só',
+   contexto:'const arr = [[1, 2], [3, 4]]',
+   codigo_resp:'arr.flat()',
+   output_resp:'[1, 2, 3, 4]'},
 
-  {id:13, term:'Preciso adicionar um ou mais elementos no INÍCIO de um array existente e quero que o original seja alterado. Qual método uso?',
-   cat:'Array',
-   def:'.unshift()',
-   ex:''},
+  // ══ STRUCTURED — String ═══════════════════════════════════
+  {id:201,type:'structured',cat:'String',term:'.split()',
+   metodo_resp:'Método de string',
+   saida_resp:'array — divide string → array',
+   contexto:'const str = "2024-04-28"',
+   codigo_resp:'str.split("-")',
+   output_resp:'["2024", "04", "28"]'},
 
-  {id:14, term:'.reverse()',
-   cat:'Array',
-   def:'Inverte a ordem dos elementos do array in-place. Modifica o original e retorna None/undefined.',
-   ex:'const arr = [1, 2, 3];\narr.reverse();   // arr → [3, 2, 1]\n\n// Armadilha:\nconst r = arr.reverse();\nconsole.log(r);  // undefined ❌ — use arr diretamente'},
+  {id:202,type:'structured',cat:'String',term:'.join() via array',
+   metodo_resp:'Método de array (chamado no array, separador como argumento)',
+   saida_resp:'string — une array → string',
+   contexto:'const arr = ["João", "Maria", "Pedro"]',
+   codigo_resp:'arr.join(", ")',
+   output_resp:'"João, Maria, Pedro"'},
 
-  {id:15, term:'Tenho uma lista de tarefas do mais antigo ao mais recente e quero exibi-las do mais recente ao mais antigo, alterando a própria lista. Qual método uso?',
-   cat:'Array',
-   def:'.reverse()',
-   ex:''},
+  {id:203,type:'structured',cat:'String',term:'.trim()',
+   metodo_resp:'Método de string (imutável)',
+   saida_resp:'string — sem espaços nas bordas',
+   contexto:'const str = "  oi mundo  "',
+   codigo_resp:'str.trim()',
+   output_resp:'"oi mundo"'},
 
-  // ── String ─────────────────────────────────────────────────────────────────
-  {id:16, term:'.split()',
-   cat:'String',
-   def:'Divide uma string em um array usando um separador. Sem separador → array com a string inteira.',
-   ex:'"a,b,c".split(",")   →  ["a","b","c"]\n"hello".split("")    →  ["h","e","l","l","o"]\n"2024-04-28".split("-")  →  ["2024","04","28"]'},
+  {id:204,type:'structured',cat:'String',term:'.replace()',
+   metodo_resp:'Método de string (imutável)',
+   saida_resp:'string — com a primeira ocorrência substituída',
+   contexto:'const str = "oi mundo"',
+   codigo_resp:'str.replace("mundo", "JS")',
+   output_resp:'"oi JS"'},
 
-  {id:17, term:'Recebo a string "2024-04-28" e preciso extrair o ano, mês e dia separadamente em um array. Qual método uso?',
-   cat:'String',
-   def:'.split("-")  →  ["2024", "04", "28"]',
-   ex:''},
+  {id:205,type:'structured',cat:'String',term:'.slice()',
+   metodo_resp:'Método de string (imutável)',
+   saida_resp:'string — trecho recortado pelos índices (início, fim)',
+   contexto:'const str = "javascript"',
+   codigo_resp:'str.slice(0, 4)',
+   output_resp:'"java"'},
 
-  {id:18, term:'.join() — String',
-   cat:'String',
-   def:'Método de STRING que une elementos de um array em uma única string, usando a string como separador.',
-   ex:'["João","Maria","Pedro"].join(", ")  →  "João, Maria, Pedro"\n["a","b","c"].join("-")              →  "a-b-c"\n["a","b","c"].join("")               →  "abc"'},
+  // ══ STRUCTURED — Object ═══════════════════════════════════
+  {id:301,type:'structured',cat:'Object',term:'Object.keys()',
+   metodo_resp:'Método estático de Object',
+   saida_resp:'array de strings — as chaves do objeto',
+   contexto:'const obj = { a: 1, b: 2, c: 3 }',
+   codigo_resp:'Object.keys(obj)',
+   output_resp:'["a", "b", "c"]'},
 
-  {id:19, term:'Tenho o array ["João","Maria","Pedro"] e preciso gerar a string "João, Maria, Pedro". Qual método uso?',
-   cat:'String',
-   def:'", ".join(array)  →  array.join(", ")',
-   ex:''},
+  {id:302,type:'structured',cat:'Object',term:'Object.values()',
+   metodo_resp:'Método estático de Object',
+   saida_resp:'array — os valores do objeto',
+   contexto:'const obj = { a: 1, b: 2, c: 3 }',
+   codigo_resp:'Object.values(obj)',
+   output_resp:'[1, 2, 3]'},
 
-  {id:20, term:'.toUpperCase()',
-   cat:'String',
-   def:'Converte a string inteira para letras maiúsculas.',
-   ex:'"hello".toUpperCase()  →  "HELLO"'},
+  {id:303,type:'structured',cat:'Object',term:'Object.entries()',
+   metodo_resp:'Método estático de Object',
+   saida_resp:'array de [chave, valor] — todos os pares',
+   contexto:'const obj = { a: 1, b: 2 }',
+   codigo_resp:'Object.entries(obj)',
+   output_resp:'[["a", 1], ["b", 2]]'},
 
-  {id:21, term:'.toLowerCase()',
-   cat:'String',
-   def:'Converte a string inteira para letras minúsculas.',
-   ex:'"HELLO".toLowerCase()  →  "hello"'},
+  // ══ STRUCTURED — JavaScript ═══════════════════════════════
+  {id:401,type:'structured',cat:'JavaScript',term:'new Set()',
+   metodo_resp:'Construtor — coleção de valores únicos',
+   saida_resp:'array sem duplicatas (via spread)',
+   contexto:'const arr = [1, 1, 2, 3, 3]',
+   codigo_resp:'[...new Set(arr)]',
+   output_resp:'[1, 2, 3]'},
 
-  {id:22, term:'.trim()',
-   cat:'String',
-   def:'Remove espaços em branco do início e do fim da string.',
-   ex:'"  oi mundo  ".trim()  →  "oi mundo"'},
+  {id:402,type:'structured',cat:'JavaScript',term:'spread  ...',
+   metodo_resp:'Operador de espalhamento',
+   saida_resp:'array ou object combinado (sem mutar o original)',
+   contexto:'const a = [1, 2];  const b = [3, 4]',
+   codigo_resp:'[...a, ...b]',
+   output_resp:'[1, 2, 3, 4]'},
 
-  {id:23, term:'.replace()',
-   cat:'String',
-   def:'Substitui a primeira ocorrência encontrada por outro valor.',
-   ex:'"oi mundo".replace("mundo","JS")  →  "oi JS"'},
+  // ══ CLASSIC — Recall ══════════════════════════════════════
+  {id:501,type:'classic',cat:'Array',term:'Preciso adicionar um produto ao FINAL de um carrinho (array). Qual método uso?',def:'.push()',ex:''},
+  {id:502,type:'classic',cat:'Array',term:'Preciso inserir um elemento no INÍCIO de um array, alterando o original. Qual método uso?',def:'.unshift()',ex:''},
+  {id:503,type:'classic',cat:'Array',term:'Tenho um array de tarefas do mais antigo ao mais recente e quero invertê-las no mesmo array. Qual método?',def:'.reverse()',ex:''},
+  {id:504,type:'classic',cat:'String',term:'Recebo "2024-04-28" e preciso separar ano, mês e dia em um array. Qual método uso?',def:'.split("-")  →  ["2024", "04", "28"]',ex:''},
+  {id:505,type:'classic',cat:'String',term:'Tenho ["João","Maria","Pedro"] e preciso gerar "João, Maria, Pedro". Qual método uso?',def:'array.join(", ")',ex:''},
+  {id:506,type:'classic',cat:'Array',term:'Preciso criar um NOVO array aplicando transformação em cada elemento, sem alterar o original. Qual método?',def:'.map()',ex:'[1,2,3].map(x => x * 2)  →  [2,4,6]'},
+  {id:507,type:'classic',cat:'Array',term:'Preciso retornar só os elementos que atendem a uma condição, sem alterar o original. Qual método?',def:'.filter()',ex:'[1,2,3,4].filter(x => x > 2)  →  [3,4]'},
+  {id:508,type:'classic',cat:'Array',term:'Preciso somar todos os valores de um array em um único número. Qual método uso?',def:'.reduce()',ex:'[1,2,3].reduce((acc, x) => acc + x, 0)  →  6'},
+  {id:509,type:'classic',cat:'Array',term:'Preciso verificar se PELO MENOS UM elemento passa em uma condição. Qual método uso?',def:'.some()',ex:'[1,2,3].some(x => x > 2)  →  true'},
+  {id:510,type:'classic',cat:'Array',term:'Preciso verificar se TODOS os elementos passam em uma condição. Qual método uso?',def:'.every()',ex:'[1,2,3].every(x => x > 0)  →  true'},
+  {id:511,type:'classic',cat:'Array',term:'Preciso verificar se um valor específico existe dentro de um array. Qual método uso?',def:'.includes()',ex:'[1,2,3].includes(2)  →  true'},
+  {id:512,type:'classic',cat:'Array',term:'Preciso encontrar o PRIMEIRO elemento que atende a uma condição. Qual método uso?',def:'.find()',ex:'[1,2,3,4].find(x => x > 2)  →  3'},
+  {id:513,type:'classic',cat:'Array',term:'Tenho um array com duplicatas e preciso removê-las. Qual é o jeito mais conciso em JS?',def:'[...new Set(array)]',ex:'[...new Set([1,1,2,3])]  →  [1,2,3]'},
 
-  {id:24, term:'.slice()',
-   cat:'String',
-   def:'Recorta parte da string pelos índices (início, fim).',
-   ex:'"javascript".slice(0,4)  →  "java"\n"javascript".slice(4)   →  "script"'},
+  // ══ CLASSIC — Algoritmo ═══════════════════════════════════
+  {id:601,type:'classic',cat:'Algoritmo',term:'Two Pointers — reverter string em JS',
+   def:'Dois índices (esq e dir) que andam um em direção ao outro trocando elementos. O(n) tempo, O(1) espaço.',
+   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}\nreverter("Python")  →  "nohtyP"'},
 
-  // ── Object ─────────────────────────────────────────────────────────────────
-  {id:25, term:'Object.keys()',
-   cat:'Object',
-   def:'Retorna um array com todas as chaves (propriedades) do objeto.',
-   ex:'Object.keys({a:1, b:2})    →  ["a","b"]'},
+  {id:602,type:'classic',cat:'Algoritmo',term:'Implemente em JS uma função que reverta uma string sem .reverse(), usando dois índices.',
+   def:'Two Pointers',
+   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}'},
 
-  {id:26, term:'Object.values()',
-   cat:'Object',
-   def:'Retorna um array com todos os valores do objeto.',
-   ex:'Object.values({a:1, b:2})  →  [1,2]'},
-
-  {id:27, term:'Object.entries()',
-   cat:'Object',
-   def:'Retorna array de pares [chave, valor] do objeto.',
-   ex:'Object.entries({a:1, b:2})  →  [["a",1],["b",2]]'},
-
-  // ── JavaScript ─────────────────────────────────────────────────────────────
-  {id:28, term:'spread  ...',
-   cat:'JavaScript',
-   def:'Copia ou combina arrays/objetos sem mutar o original.',
-   ex:'[...arr1, ...arr2]        // combina arrays\n{...obj1, extra: 99}      // combina objetos'},
-
-  {id:29, term:'new Set()',
-   cat:'JavaScript',
-   def:'Coleção de valores únicos. Remove duplicatas de um array.',
-   ex:'[...new Set([1,1,2,3])]   →  [1,2,3]\nnew Set([1,2,2,3]).size   →  3'},
-
-  // ── Async ──────────────────────────────────────────────────────────────────
-  {id:30, term:'async / await',
-   cat:'Async',
-   def:'Pausa a função até a Promise resolver. Torna código assíncrono legível.',
+  // ══ CLASSIC — Async ═══════════════════════════════════════
+  {id:701,type:'classic',cat:'Async',term:'async / await — o que faz?',
+   def:'Pausa a execução até a Promise resolver. Torna código assíncrono legível como síncrono.',
    ex:'async function buscar() {\n  const res  = await fetch(url);\n  const data = await res.json();\n  return data;\n}'},
 
-  {id:31, term:'Promise.all()',
-   cat:'Async',
-   def:'Executa várias Promises ao mesmo tempo e espera todas terminarem.',
+  {id:702,type:'classic',cat:'Async',term:'Promise.all() — o que faz?',
+   def:'Executa várias Promises em paralelo e aguarda TODAS terminarem.',
    ex:'const [a, b] = await Promise.all([\n  fetch(url1),\n  fetch(url2)\n]);'},
-
-  // ── Algoritmo ──────────────────────────────────────────────────────────────
-  {id:32, term:'Two Pointers — reverter string/lista',
-   cat:'Algoritmo',
-   def:'Usa dois índices (esq e dir) que caminham um em direção ao outro trocando elementos. O(n) tempo, O(1) espaço.',
-   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++;\n    dir--;\n  }\n  return s.join("");\n}\n\nreverter("Python")  →  "nohtyP"'},
-
-  {id:33, term:'Implemente uma função que reverta uma string em JS sem usar .reverse() direto, trocando caracteres com dois índices.',
-   cat:'Algoritmo',
-   def:'Two Pointers',
-   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++;\n    dir--;\n  }\n  return s.join("");\n}'},
 ];
 
+// ─────────────────────────────────────────────────────────────
 let cards = [], queue = [], wrongList = [], qi = 0, score = {ok:0,nok:0};
+let formType = 'classic';
 
 function load() {
   try { cards = JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { cards = []; }
   if (!cards.length) { cards = DEFAULT_CARDS; save(); }
   updateBadge(); fillCatSels(); setupStudy(); renderList();
 }
-
 function save() { localStorage.setItem(KEY, JSON.stringify(cards)); }
 function updateBadge() { document.getElementById('total-badge').textContent = cards.length + ' cards'; }
 function cats() { return ['Todas', ...new Set(cards.map(c=>c.cat))]; }
@@ -466,48 +500,47 @@ function go(tab) {
   if (tab==='list') renderList();
 }
 
-// ── STUDY ──
+// ── STUDY ───────────────────────────────────────────────────
 function setupStudy() {
   fillCatSels();
   const cat = document.getElementById('study-cat-sel').value;
   const pool = cat==='Todas' ? [...cards] : cards.filter(c=>c.cat===cat);
-  queue = shuffle(pool); // Fisher-Yates — aleatoriedade real
+  queue = shuffle(pool);
   wrongList = []; qi = 0; score = {ok:0,nok:0};
-  updateProgress();
-  renderStudyMain();
+  updateProgress(); renderStudyMain();
 }
 
 function updateProgress() {
   const total = queue.length;
-  const pct = total ? Math.round(qi / total * 100) : 0;
-  document.getElementById('prog-fill').style.width = pct + '%';
-  document.getElementById('prog-label').textContent = qi + '/' + total;
-  document.getElementById('deck-count').textContent = total + ' cards';
+  const pct = total ? Math.round(qi/total*100) : 0;
+  document.getElementById('prog-fill').style.width = pct+'%';
+  document.getElementById('prog-label').textContent = qi+'/'+total;
+  document.getElementById('deck-count').textContent = total+' cards';
   const wb = document.getElementById('wrong-count');
-  if (wrongList.length) { wb.style.display = ''; wb.textContent = wrongList.length + ' pra repetir'; }
-  else { wb.style.display = 'none'; }
+  if (wrongList.length) { wb.style.display=''; wb.textContent=wrongList.length+' pra repetir'; }
+  else wb.style.display='none';
 }
 
 function renderStudyMain() {
   const el = document.getElementById('study-main');
-  if (!cards.length) {
-    el.innerHTML = `<div class="empty-state">Nenhum card ainda.<br>Vá em <b>+ Adicionar</b> e crie o primeiro!</div>`;
-    return;
-  }
+  if (!cards.length) { el.innerHTML=`<div class="empty-state">Nenhum card ainda.<br>Vá em <b>+ Adicionar</b>!</div>`; return; }
   if (!queue.length) { setupStudy(); return; }
   if (qi >= queue.length) { renderScore(el); return; }
-
   const c = queue[qi];
   updateProgress();
+  if (c.type==='structured') renderStructuredCard(el,c);
+  else renderClassicCard(el,c);
+}
 
+// ── CLASSIC CARD ────────────────────────────────────────────
+function renderClassicCard(el, c) {
   el.innerHTML = `
     <div class="card-front-box">
       <div class="card-cat">${c.cat}</div>
       <div class="card-term">${esc(c.term)}</div>
-      <div class="user-answer-label">O que você acha que faz?</div>
-      <textarea class="user-answer-box" id="user-ans" placeholder="Escreva com suas palavras…" onkeydown="if(event.ctrlKey && event.key==='Enter') reveal()"></textarea>
+      <div class="user-answer-label">Sua resposta</div>
+      <textarea class="user-answer-box" id="user-ans" placeholder="Escreva com suas palavras…" onkeydown="if(event.ctrlKey&&event.key==='Enter')reveal()"></textarea>
     </div>
-
     <div class="card-back-box" id="back-box">
       <div class="back-section-label">Sua resposta</div>
       <div class="back-user-answer" id="back-user-ans"></div>
@@ -515,144 +548,247 @@ function renderStudyMain() {
       <div class="back-section-label">Resposta correta</div>
       <div class="back-term">${esc(c.term)}</div>
       <div class="back-def">${esc(c.def)}</div>
-      ${c.ex ? `<div class="back-example">${esc(c.ex)}</div>` : ''}
+      ${c.ex?`<div class="back-example">${esc(c.ex)}</div>`:''}
     </div>
-
-    <div id="study-actions">
-      <div class="row-between">
-        <button class="btn-reveal" id="btn-rev" onclick="reveal()" style="flex:1">Revelar resposta</button>
-        <button class="btn-skip" onclick="skip()" style="margin-left:8px">Pular →</button>
-      </div>
-      <div id="eval-btns" style="display:none; margin-top:10px">
-        <div class="answer-btns">
-          <button class="btn-wrong" onclick="answer(false)">✗ &nbsp;Errei — repetir depois</button>
-          <button class="btn-right" onclick="answer(true)">✓ &nbsp;Acertei</button>
-        </div>
-      </div>
-    </div>
-  `;
+    ${actionsHTML()}`;
   document.getElementById('user-ans').focus();
 }
 
-function esc(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+// ── STRUCTURED CARD ─────────────────────────────────────────
+function renderStructuredCard(el, c) {
+  el.innerHTML = `
+    <div class="card-front-box structured">
+      <div class="struct-header">
+        <div class="card-cat">${c.cat}</div>
+        <div class="struct-title">${esc(c.term)}</div>
+      </div>
+      <div class="struct-fields">
+        <div class="struct-field">
+          <div class="struct-label"><span class="struct-label-num">1</span> Método</div>
+          <input type="text" class="struct-input" id="s-metodo" placeholder="tipo / categoria do método…" autocomplete="off" />
+        </div>
+        <div class="struct-field">
+          <div class="struct-label"><span class="struct-label-num">2</span> Saída</div>
+          <input type="text" class="struct-input" id="s-saida" placeholder="o que retorna / tipo de dado…" autocomplete="off" />
+        </div>
+        <div class="struct-field">
+          <div class="struct-label"><span class="struct-label-num">3</span> O que faz aqui?</div>
+          <div class="struct-context">${esc(c.contexto)}</div>
+          <input type="text" class="struct-input" id="s-exemplo" placeholder="código → output" autocomplete="off" onkeydown="if(event.key==='Enter')reveal()" />
+        </div>
+      </div>
+    </div>
+
+    <div class="struct-back-box" id="back-box">
+      <div class="struct-back-row">
+        <div class="struct-back-label"><span class="struct-label-num">1</span> Método</div>
+        <div class="struct-back-user" id="back-metodo"></div>
+        <div class="struct-back-correct">${esc(c.metodo_resp)}</div>
+      </div>
+      <div class="struct-back-row">
+        <div class="struct-back-label"><span class="struct-label-num">2</span> Saída</div>
+        <div class="struct-back-user" id="back-saida"></div>
+        <div class="struct-back-correct">${esc(c.saida_resp)}</div>
+      </div>
+      <div class="struct-back-row">
+        <div class="struct-back-label"><span class="struct-label-num">3</span> O que faz aqui?</div>
+        <div class="struct-context-back">${esc(c.contexto)}</div>
+        <div class="struct-back-user" id="back-exemplo"></div>
+        <div class="struct-back-correct-code">
+          <span class="struct-code">${esc(c.codigo_resp)}</span>
+          <span class="struct-arrow">→</span>
+          <span class="struct-output">${esc(c.output_resp)}</span>
+        </div>
+      </div>
+    </div>
+
+    ${actionsHTML()}`;
+  document.getElementById('s-metodo').focus();
+}
+
+function actionsHTML() {
+  return `<div id="study-actions">
+    <div class="row-between">
+      <button class="btn-reveal" id="btn-rev" onclick="reveal()" style="flex:1">Revelar resposta</button>
+      <button class="btn-skip" onclick="skip()" style="margin-left:8px">Pular →</button>
+    </div>
+    <div id="eval-btns" style="display:none;margin-top:10px">
+      <div class="answer-btns">
+        <button class="btn-wrong" onclick="answer(false)">✗ &nbsp;Errei — repetir depois</button>
+        <button class="btn-right" onclick="answer(true)">✓ &nbsp;Acertei</button>
+      </div>
+    </div>
+  </div>`;
 }
 
 function reveal() {
-  const userAns = document.getElementById('user-ans').value.trim();
-  document.getElementById('back-user-ans').textContent = userAns || '(sem resposta)';
+  const c = queue[qi];
+  if (c.type==='structured') {
+    const m=document.getElementById('s-metodo'), s=document.getElementById('s-saida'), e=document.getElementById('s-exemplo');
+    document.getElementById('back-metodo').textContent  = m?.value.trim()||'(sem resposta)';
+    document.getElementById('back-saida').textContent   = s?.value.trim()||'(sem resposta)';
+    document.getElementById('back-exemplo').textContent = e?.value.trim()||'(sem resposta)';
+  } else {
+    const ua = document.getElementById('user-ans');
+    document.getElementById('back-user-ans').textContent = ua?.value.trim()||'(sem resposta)';
+  }
   document.getElementById('back-box').classList.add('visible');
   document.getElementById('btn-rev').style.display = 'none';
   document.getElementById('eval-btns').style.display = 'block';
-  document.getElementById('back-box').scrollIntoView({behavior:'smooth', block:'nearest'});
+  document.getElementById('back-box').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
 function answer(ok) {
-  if (ok) { score.ok++; }
-  else { score.nok++; wrongList.push({...queue[qi]}); }
+  if (ok) score.ok++; else { score.nok++; wrongList.push({...queue[qi]}); }
   qi++;
-  if (qi >= queue.length && wrongList.length) {
-    queue = queue.concat(shuffle(wrongList));
-    wrongList = [];
-  }
+  if (qi>=queue.length && wrongList.length) { queue=queue.concat(shuffle(wrongList)); wrongList=[]; }
   renderStudyMain();
 }
 
-function skip() {
-  const c = queue.splice(qi, 1)[0];
-  queue.push(c);
-  renderStudyMain();
-}
+function skip() { const c=queue.splice(qi,1)[0]; queue.push(c); renderStudyMain(); }
 
 function renderScore(el) {
-  const total = score.ok + score.nok;
-  const pct = total ? Math.round(score.ok / total * 100) : 100;
-  document.getElementById('prog-fill').style.width = '100%';
-  el.innerHTML = `
-    <div class="score-card">
-      <div class="score-big">${pct}%</div>
-      <div class="score-label">de acerto — ${total} respostas no total</div>
-      <div class="score-row">
-        <div class="score-stat g"><div class="n">${score.ok}</div><div class="l">acertos</div></div>
-        <div class="score-stat r"><div class="n">${score.nok}</div><div class="l">erros</div></div>
-      </div>
-      <button class="btn-primary" onclick="setupStudy()">Estudar novamente</button>
+  const total = score.ok+score.nok;
+  const pct   = total ? Math.round(score.ok/total*100) : 100;
+  document.getElementById('prog-fill').style.width='100%';
+  el.innerHTML=`<div class="score-card">
+    <div class="score-big">${pct}%</div>
+    <div class="score-label">de acerto — ${total} respostas no total</div>
+    <div class="score-row">
+      <div class="score-stat g"><div class="n">${score.ok}</div><div class="l">acertos</div></div>
+      <div class="score-stat r"><div class="n">${score.nok}</div><div class="l">erros</div></div>
     </div>
-  `;
+    <button class="btn-primary" onclick="setupStudy()">Estudar novamente</button>
+  </div>`;
 }
 
-// ── LIST ──
+// ── LIST ────────────────────────────────────────────────────
 function renderList() {
-  const cat = document.getElementById('list-cat-sel')?.value || 'Todas';
+  const cat = document.getElementById('list-cat-sel')?.value||'Todas';
   const filtered = cat==='Todas' ? cards : cards.filter(c=>c.cat===cat);
-  document.getElementById('list-count').textContent = filtered.length + ' cards';
+  document.getElementById('list-count').textContent = filtered.length+' cards';
   const el = document.getElementById('card-list');
-  if (!filtered.length) { el.innerHTML = `<div class="empty-state">Nenhum card aqui.</div>`; return; }
-  el.innerHTML = filtered.map(c=>`
-    <div class="card-row">
+  if (!filtered.length) { el.innerHTML=`<div class="empty-state">Nenhum card aqui.</div>`; return; }
+  el.innerHTML = filtered.map(c=>{
+    const preview = c.type==='structured'
+      ? `${c.metodo_resp} · ${c.saida_resp}`
+      : (c.def||'');
+    return `<div class="card-row">
+      <span class="cr-type">${c.type==='structured'?'struct':'recall'}</span>
       <span class="cr-term">${esc(c.term)}</span>
-      <span class="cr-def">${esc(c.def)}</span>
+      <span class="cr-def">${esc(preview)}</span>
       <span class="cr-cat">${c.cat}</span>
       <button class="cr-edit" onclick="editCard(${c.id})" title="Editar">✎</button>
       <button class="cr-del" onclick="del(${c.id})" title="Excluir">×</button>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function del(id) {
   if (!confirm('Excluir este card?')) return;
-  cards = cards.filter(c=>c.id!==id);
+  cards=cards.filter(c=>c.id!==id);
   save(); updateBadge(); fillCatSels(); renderList();
-  queue = queue.filter(c=>c.id!==id);
-  wrongList = wrongList.filter(c=>c.id!==id);
-  if (qi >= queue.length) qi = Math.max(0, queue.length-1);
+  queue=queue.filter(c=>c.id!==id); wrongList=wrongList.filter(c=>c.id!==id);
+  if (qi>=queue.length) qi=Math.max(0,queue.length-1);
 }
 
-// ── ADD ──
+// ── ADD ─────────────────────────────────────────────────────
+function setFormType(type) {
+  formType = type;
+  document.getElementById('form-classic').style.display    = type==='classic'?'':'none';
+  document.getElementById('form-structured').style.display = type==='structured'?'':'none';
+  document.getElementById('toggle-classic').classList.toggle('active',type==='classic');
+  document.getElementById('toggle-structured').classList.toggle('active',type==='structured');
+}
+
 function addCard() {
-  const term = document.getElementById('f-term').value.trim();
-  const cat  = document.getElementById('f-cat').value;
-  const def  = document.getElementById('f-def').value.trim();
-  const ex   = document.getElementById('f-ex').value.trim();
-  if (!term || !def) { alert('Preencha o termo e a explicação!'); return; }
-  cards.push({id: Date.now(), term, cat, def, ex});
+  let card;
+  if (formType==='structured') {
+    const term=document.getElementById('fs-term').value.trim();
+    const cat=document.getElementById('fs-cat').value;
+    const metodo_resp=document.getElementById('fs-metodo').value.trim();
+    const saida_resp=document.getElementById('fs-saida').value.trim();
+    const contexto=document.getElementById('fs-contexto').value.trim();
+    const codigo_resp=document.getElementById('fs-codigo').value.trim();
+    const output_resp=document.getElementById('fs-output').value.trim();
+    if (!term||!metodo_resp||!saida_resp) { alert('Preencha ao menos Método, Resposta-Método e Resposta-Saída!'); return; }
+    card={id:Date.now(),type:'structured',cat,term,metodo_resp,saida_resp,contexto,codigo_resp,output_resp};
+    ['fs-term','fs-metodo','fs-saida','fs-contexto','fs-codigo','fs-output'].forEach(id=>document.getElementById(id).value='');
+  } else {
+    const term=document.getElementById('f-term').value.trim();
+    const cat=document.getElementById('f-cat').value;
+    const def=document.getElementById('f-def').value.trim();
+    const ex=document.getElementById('f-ex').value.trim();
+    if (!term||!def) { alert('Preencha o termo e a explicação!'); return; }
+    card={id:Date.now(),type:'classic',cat,term,def,ex};
+    ['f-term','f-def','f-ex'].forEach(id=>document.getElementById(id).value='');
+  }
+  cards.push(card);
   save(); updateBadge(); fillCatSels();
-  document.getElementById('f-term').value = '';
-  document.getElementById('f-def').value = '';
-  document.getElementById('f-ex').value = '';
   toast('Card salvo!');
   go('study'); setupStudy();
 }
 
-// ── EDIT ──
+// ── EDIT ────────────────────────────────────────────────────
 function editCard(id) {
-  const c = cards.find(c=>c.id===id); if (!c) return;
-  document.getElementById('e-id').value = id;
-  document.getElementById('e-term').value = c.term;
-  document.getElementById('e-def').value = c.def;
-  document.getElementById('e-ex').value = c.ex || '';
-  document.getElementById('e-cat').value = c.cat;
-  document.getElementById('edit-modal').style.display = 'flex';
-  document.getElementById('e-term').focus();
+  const c=cards.find(c=>c.id===id); if (!c) return;
+  document.getElementById('e-id').value=id;
+  document.getElementById('e-type').value=c.type||'classic';
+  if (c.type==='structured') {
+    document.getElementById('edit-classic').style.display='none';
+    document.getElementById('edit-structured').style.display='';
+    document.getElementById('es-term').value=c.term;
+    document.getElementById('es-cat').value=c.cat;
+    document.getElementById('es-metodo').value=c.metodo_resp||'';
+    document.getElementById('es-saida').value=c.saida_resp||'';
+    document.getElementById('es-contexto').value=c.contexto||'';
+    document.getElementById('es-codigo').value=c.codigo_resp||'';
+    document.getElementById('es-output').value=c.output_resp||'';
+  } else {
+    document.getElementById('edit-classic').style.display='';
+    document.getElementById('edit-structured').style.display='none';
+    document.getElementById('e-term').value=c.term;
+    document.getElementById('e-cat').value=c.cat;
+    document.getElementById('e-def').value=c.def;
+    document.getElementById('e-ex').value=c.ex||'';
+  }
+  document.getElementById('edit-modal').style.display='flex';
 }
-function closeEdit() { document.getElementById('edit-modal').style.display = 'none'; }
+
+function closeEdit() { document.getElementById('edit-modal').style.display='none'; }
+
 function saveEdit() {
-  const id   = parseInt(document.getElementById('e-id').value);
-  const term = document.getElementById('e-term').value.trim();
-  const def  = document.getElementById('e-def').value.trim();
-  const ex   = document.getElementById('e-ex').value.trim();
-  const cat  = document.getElementById('e-cat').value;
-  if (!term || !def) { alert('Preencha o termo e a explicação!'); return; }
-  const idx = cards.findIndex(c=>c.id===id); if (idx===-1) return;
-  cards[idx] = {id, term, cat, def, ex};
+  const id=parseInt(document.getElementById('e-id').value);
+  const type=document.getElementById('e-type').value;
+  const idx=cards.findIndex(c=>c.id===id); if (idx===-1) return;
+  let updated;
+  if (type==='structured') {
+    const term=document.getElementById('es-term').value.trim();
+    const cat=document.getElementById('es-cat').value;
+    const metodo_resp=document.getElementById('es-metodo').value.trim();
+    const saida_resp=document.getElementById('es-saida').value.trim();
+    const contexto=document.getElementById('es-contexto').value.trim();
+    const codigo_resp=document.getElementById('es-codigo').value.trim();
+    const output_resp=document.getElementById('es-output').value.trim();
+    if (!term||!metodo_resp||!saida_resp) { alert('Preencha os campos obrigatórios!'); return; }
+    updated={id,type,cat,term,metodo_resp,saida_resp,contexto,codigo_resp,output_resp};
+  } else {
+    const term=document.getElementById('e-term').value.trim();
+    const cat=document.getElementById('e-cat').value;
+    const def=document.getElementById('e-def').value.trim();
+    const ex=document.getElementById('e-ex').value.trim();
+    if (!term||!def) { alert('Preencha o termo e a explicação!'); return; }
+    updated={id,type,cat,term,def,ex};
+  }
+  cards[idx]=updated;
   save(); updateBadge(); fillCatSels(); renderList();
   closeEdit(); toast('Card atualizado!');
 }
 
 function toast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 2200);
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
 }
 
 load();
