@@ -41,12 +41,16 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .pill.wrong-pill { border-color: #7f1d1d; color: var(--red); }
 .cat-sel { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: var(--sans); font-size: 13px; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
 
+.session-wrap { display: flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; }
+.session-label { font-size: 11px; color: var(--muted); font-family: var(--mono); white-space: nowrap; }
+.session-sel { background: transparent; border: none; color: var(--accent2); font-family: var(--mono); font-size: 13px; font-weight: 600; cursor: pointer; outline: none; padding: 0; }
+.session-sel option { background: var(--surface2); color: var(--text); }
+
 .prog-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 1.75rem; }
 .prog-bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
 .prog-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; transition: width 0.4s ease; }
 .prog-label { font-size: 12px; color: var(--muted); font-family: var(--mono); white-space: nowrap; }
 
-/* ── CLASSIC FRONT ────────────────────────── */
 .card-front-box {
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
   padding: 2.5rem 2rem 2rem; display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;
@@ -57,7 +61,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .user-answer-box { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-family: var(--sans); font-size: 14px; color: var(--text); resize: vertical; min-height: 80px; outline: none; transition: border-color 0.15s; line-height: 1.6; }
 .user-answer-box:focus { border-color: var(--accent); }
 
-/* ── CLASSIC BACK ─────────────────────────── */
 .card-back-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 1rem; display: none; }
 .card-back-box.visible { display: block; }
 .back-section-label { font-size: 11px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
@@ -67,7 +70,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .back-def { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 1rem; }
 .back-example { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-family: var(--mono); font-size: 13px; color: var(--accent2); white-space: pre-wrap; word-break: break-all; line-height: 1.8; }
 
-/* ── STRUCTURED FRONT ─────────────────────── */
 .card-front-box.structured { align-items: stretch; padding: 1.75rem; }
 .struct-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
 .struct-title { font-family: var(--mono); font-size: 30px; font-weight: 600; color: var(--text); text-align: center; }
@@ -79,7 +81,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .struct-input:focus { border-color: var(--accent); }
 .struct-context { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 12px; color: var(--accent2); margin-bottom: 4px; }
 
-/* ── STRUCTURED BACK ──────────────────────── */
 .struct-back-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1rem; display: none; }
 .struct-back-box.visible { display: block; }
 .struct-back-row { padding: 1rem 1.5rem; }
@@ -93,7 +94,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .struct-output { color: var(--green); }
 .struct-context-back { background: var(--surface2); border-radius: 6px; padding: 6px 10px; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 6px; }
 
-/* ── BUTTONS ──────────────────────────────── */
 .btn-reveal { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; margin-bottom: 8px; }
 .btn-reveal:hover { background: var(--accent2); }
 .answer-btns { display: flex; gap: 10px; }
@@ -105,7 +105,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-skip:hover { color: var(--text); border-color: var(--muted); }
 .row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 
-/* ── SCORE ────────────────────────────────── */
 .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
 .score-big { font-family: var(--mono); font-size: 64px; font-weight: 600; color: var(--accent2); line-height: 1; }
 .score-label { font-size: 14px; color: var(--muted); margin-top: 8px; margin-bottom: 2rem; }
@@ -118,7 +117,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .btn-primary { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .btn-primary:hover { background: var(--accent2); }
 
-/* ── LIST ─────────────────────────────────── */
 .list-head { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
 .spacer { flex: 1; }
 .card-list { display: flex; flex-direction: column; gap: 8px; }
@@ -133,7 +131,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .cr-del { background: transparent; border: none; color: var(--muted); font-size: 18px; cursor: pointer; padding: 0 4px; flex-shrink: 0; line-height: 1; transition: color 0.12s; }
 .cr-del:hover { color: var(--red); }
 
-/* ── ADD FORM ─────────────────────────────── */
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
 .form-section-title { font-size: 11px; color: var(--accent); font-family: var(--mono); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
 .type-toggle { display: flex; gap: 6px; margin-bottom: 1.5rem; }
@@ -148,7 +145,6 @@ nav button.active { background: var(--surface2); color: var(--text); }
 .save-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
 .save-btn:hover { background: var(--accent2); }
 
-/* ── MODAL ────────────────────────────────── */
 .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 1rem; overflow-y: auto; }
 .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; }
 .modal h3 { font-size: 15px; font-weight: 500; margin-bottom: 1.25rem; color: var(--text); }
@@ -179,6 +175,20 @@ nav button.active { background: var(--surface2); color: var(--text); }
   <div id="screen-study" class="screen active">
     <div class="deck-info">
       <select class="cat-sel" id="study-cat-sel" onchange="setupStudy()"></select>
+
+      <!-- SELETOR DE SESSÃO -->
+      <div class="session-wrap">
+        <span class="session-label">questões:</span>
+        <select class="session-sel" id="session-size-sel" onchange="setupStudy()">
+          <option value="5">5</option>
+          <option value="8">8</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="0">todas</option>
+        </select>
+      </div>
+
       <span id="deck-count" class="pill">0 cards</span>
       <span id="wrong-count" class="pill wrong-pill" style="display:none"></span>
     </div>
@@ -280,165 +290,28 @@ function esc(s) {
 }
 
 const DEFAULT_CARDS = [
-  // ══ STRUCTURED — Array ════════════════════════════════════
-  {id:101,type:'structured',cat:'Array',term:'.join()',
-   metodo_resp:'Método de array',
-   saida_resp:'string — converte array → string',
-   contexto:'const arr = ["maçã", "banana", "açaí"]',
-   codigo_resp:'arr.join(",")',
-   output_resp:'"maçã,banana,açaí"'},
-
-  {id:102,type:'structured',cat:'Array',term:'.push()',
-   metodo_resp:'Método de array (mutável — altera o original)',
-   saida_resp:'number — novo length do array',
-   contexto:'const arr = ["a", "b"]',
-   codigo_resp:'arr.push("c")',
-   output_resp:'3  →  arr agora é ["a", "b", "c"]'},
-
-  {id:103,type:'structured',cat:'Array',term:'.unshift()',
-   metodo_resp:'Método de array (mutável — altera o original)',
-   saida_resp:'number — novo length do array',
-   contexto:'const arr = ["b", "c"]',
-   codigo_resp:'arr.unshift("a")',
-   output_resp:'3  →  arr agora é ["a", "b", "c"]'},
-
-  {id:104,type:'structured',cat:'Array',term:'.reverse()',
-   metodo_resp:'Método de array (in-place — altera o original)',
-   saida_resp:'array — o próprio array invertido',
-   contexto:'const arr = [1, 2, 3, 4, 5]',
-   codigo_resp:'arr.reverse()',
-   output_resp:'[5, 4, 3, 2, 1]'},
-
-  {id:105,type:'structured',cat:'Array',term:'.map()',
-   metodo_resp:'Método de array (imutável — retorna novo array)',
-   saida_resp:'array — novo array com elementos transformados',
-   contexto:'const arr = [1, 2, 3]',
-   codigo_resp:'arr.map(x => x * 2)',
-   output_resp:'[2, 4, 6]'},
-
-  {id:106,type:'structured',cat:'Array',term:'.filter()',
-   metodo_resp:'Método de array (imutável — retorna novo array)',
-   saida_resp:'array — só com elementos que passaram no teste',
-   contexto:'const arr = [1, 2, 3, 4, 5]',
-   codigo_resp:'arr.filter(x => x > 2)',
-   output_resp:'[3, 4, 5]'},
-
-  {id:107,type:'structured',cat:'Array',term:'.reduce()',
-   metodo_resp:'Método de array (imutável — acumula em um valor)',
-   saida_resp:'any — o valor acumulado ao final',
-   contexto:'const arr = [1, 2, 3, 4]',
-   codigo_resp:'arr.reduce((acc, x) => acc + x, 0)',
-   output_resp:'10'},
-
-  {id:108,type:'structured',cat:'Array',term:'.find()',
-   metodo_resp:'Método de array (imutável)',
-   saida_resp:'any | undefined — primeiro elemento que passa no teste',
-   contexto:'const arr = [1, 2, 3, 4, 5]',
-   codigo_resp:'arr.find(x => x > 3)',
-   output_resp:'4'},
-
-  {id:109,type:'structured',cat:'Array',term:'.includes()',
-   metodo_resp:'Método de array (imutável)',
-   saida_resp:'boolean — true se o valor existir no array',
-   contexto:'const arr = [1, 2, 3]',
-   codigo_resp:'arr.includes(2)',
-   output_resp:'true'},
-
-  {id:110,type:'structured',cat:'Array',term:'.some()',
-   metodo_resp:'Método de array (imutável)',
-   saida_resp:'boolean — true se AO MENOS 1 elemento passar',
-   contexto:'const arr = [1, 2, 3]',
-   codigo_resp:'arr.some(x => x > 2)',
-   output_resp:'true'},
-
-  {id:111,type:'structured',cat:'Array',term:'.every()',
-   metodo_resp:'Método de array (imutável)',
-   saida_resp:'boolean — true só se TODOS passarem',
-   contexto:'const arr = [1, 2, 3]',
-   codigo_resp:'arr.every(x => x > 0)',
-   output_resp:'true'},
-
-  {id:112,type:'structured',cat:'Array',term:'.flat()',
-   metodo_resp:'Método de array (imutável — retorna novo array)',
-   saida_resp:'array — achata arrays aninhados em um nível só',
-   contexto:'const arr = [[1, 2], [3, 4]]',
-   codigo_resp:'arr.flat()',
-   output_resp:'[1, 2, 3, 4]'},
-
-  // ══ STRUCTURED — String ═══════════════════════════════════
-  {id:201,type:'structured',cat:'String',term:'.split()',
-   metodo_resp:'Método de string',
-   saida_resp:'array — divide string → array',
-   contexto:'const str = "2024-04-28"',
-   codigo_resp:'str.split("-")',
-   output_resp:'["2024", "04", "28"]'},
-
-  {id:202,type:'structured',cat:'String',term:'.join() via array',
-   metodo_resp:'Método de array (chamado no array, separador como argumento)',
-   saida_resp:'string — une array → string',
-   contexto:'const arr = ["João", "Maria", "Pedro"]',
-   codigo_resp:'arr.join(", ")',
-   output_resp:'"João, Maria, Pedro"'},
-
-  {id:203,type:'structured',cat:'String',term:'.trim()',
-   metodo_resp:'Método de string (imutável)',
-   saida_resp:'string — sem espaços nas bordas',
-   contexto:'const str = "  oi mundo  "',
-   codigo_resp:'str.trim()',
-   output_resp:'"oi mundo"'},
-
-  {id:204,type:'structured',cat:'String',term:'.replace()',
-   metodo_resp:'Método de string (imutável)',
-   saida_resp:'string — com a primeira ocorrência substituída',
-   contexto:'const str = "oi mundo"',
-   codigo_resp:'str.replace("mundo", "JS")',
-   output_resp:'"oi JS"'},
-
-  {id:205,type:'structured',cat:'String',term:'.slice()',
-   metodo_resp:'Método de string (imutável)',
-   saida_resp:'string — trecho recortado pelos índices (início, fim)',
-   contexto:'const str = "javascript"',
-   codigo_resp:'str.slice(0, 4)',
-   output_resp:'"java"'},
-
-  // ══ STRUCTURED — Object ═══════════════════════════════════
-  {id:301,type:'structured',cat:'Object',term:'Object.keys()',
-   metodo_resp:'Método estático de Object',
-   saida_resp:'array de strings — as chaves do objeto',
-   contexto:'const obj = { a: 1, b: 2, c: 3 }',
-   codigo_resp:'Object.keys(obj)',
-   output_resp:'["a", "b", "c"]'},
-
-  {id:302,type:'structured',cat:'Object',term:'Object.values()',
-   metodo_resp:'Método estático de Object',
-   saida_resp:'array — os valores do objeto',
-   contexto:'const obj = { a: 1, b: 2, c: 3 }',
-   codigo_resp:'Object.values(obj)',
-   output_resp:'[1, 2, 3]'},
-
-  {id:303,type:'structured',cat:'Object',term:'Object.entries()',
-   metodo_resp:'Método estático de Object',
-   saida_resp:'array de [chave, valor] — todos os pares',
-   contexto:'const obj = { a: 1, b: 2 }',
-   codigo_resp:'Object.entries(obj)',
-   output_resp:'[["a", 1], ["b", 2]]'},
-
-  // ══ STRUCTURED — JavaScript ═══════════════════════════════
-  {id:401,type:'structured',cat:'JavaScript',term:'new Set()',
-   metodo_resp:'Construtor — coleção de valores únicos',
-   saida_resp:'array sem duplicatas (via spread)',
-   contexto:'const arr = [1, 1, 2, 3, 3]',
-   codigo_resp:'[...new Set(arr)]',
-   output_resp:'[1, 2, 3]'},
-
-  {id:402,type:'structured',cat:'JavaScript',term:'spread  ...',
-   metodo_resp:'Operador de espalhamento',
-   saida_resp:'array ou object combinado (sem mutar o original)',
-   contexto:'const a = [1, 2];  const b = [3, 4]',
-   codigo_resp:'[...a, ...b]',
-   output_resp:'[1, 2, 3, 4]'},
-
-  // ══ CLASSIC — Recall ══════════════════════════════════════
+  {id:101,type:'structured',cat:'Array',term:'.join()',metodo_resp:'Método de array',saida_resp:'string — converte array → string',contexto:'const arr = ["maçã", "banana", "açaí"]',codigo_resp:'arr.join(",")',output_resp:'"maçã,banana,açaí"'},
+  {id:102,type:'structured',cat:'Array',term:'.push()',metodo_resp:'Método de array (mutável — altera o original)',saida_resp:'number — novo length do array',contexto:'const arr = ["a", "b"]',codigo_resp:'arr.push("c")',output_resp:'3  →  arr agora é ["a", "b", "c"]'},
+  {id:103,type:'structured',cat:'Array',term:'.unshift()',metodo_resp:'Método de array (mutável — altera o original)',saida_resp:'number — novo length do array',contexto:'const arr = ["b", "c"]',codigo_resp:'arr.unshift("a")',output_resp:'3  →  arr agora é ["a", "b", "c"]'},
+  {id:104,type:'structured',cat:'Array',term:'.reverse()',metodo_resp:'Método de array (in-place — altera o original)',saida_resp:'array — o próprio array invertido',contexto:'const arr = [1, 2, 3, 4, 5]',codigo_resp:'arr.reverse()',output_resp:'[5, 4, 3, 2, 1]'},
+  {id:105,type:'structured',cat:'Array',term:'.map()',metodo_resp:'Método de array (imutável — retorna novo array)',saida_resp:'array — novo array com elementos transformados',contexto:'const arr = [1, 2, 3]',codigo_resp:'arr.map(x => x * 2)',output_resp:'[2, 4, 6]'},
+  {id:106,type:'structured',cat:'Array',term:'.filter()',metodo_resp:'Método de array (imutável — retorna novo array)',saida_resp:'array — só com elementos que passaram no teste',contexto:'const arr = [1, 2, 3, 4, 5]',codigo_resp:'arr.filter(x => x > 2)',output_resp:'[3, 4, 5]'},
+  {id:107,type:'structured',cat:'Array',term:'.reduce()',metodo_resp:'Método de array (imutável — acumula em um valor)',saida_resp:'any — o valor acumulado ao final',contexto:'const arr = [1, 2, 3, 4]',codigo_resp:'arr.reduce((acc, x) => acc + x, 0)',output_resp:'10'},
+  {id:108,type:'structured',cat:'Array',term:'.find()',metodo_resp:'Método de array (imutável)',saida_resp:'any | undefined — primeiro elemento que passa no teste',contexto:'const arr = [1, 2, 3, 4, 5]',codigo_resp:'arr.find(x => x > 3)',output_resp:'4'},
+  {id:109,type:'structured',cat:'Array',term:'.includes()',metodo_resp:'Método de array (imutável)',saida_resp:'boolean — true se o valor existir no array',contexto:'const arr = [1, 2, 3]',codigo_resp:'arr.includes(2)',output_resp:'true'},
+  {id:110,type:'structured',cat:'Array',term:'.some()',metodo_resp:'Método de array (imutável)',saida_resp:'boolean — true se AO MENOS 1 elemento passar',contexto:'const arr = [1, 2, 3]',codigo_resp:'arr.some(x => x > 2)',output_resp:'true'},
+  {id:111,type:'structured',cat:'Array',term:'.every()',metodo_resp:'Método de array (imutável)',saida_resp:'boolean — true só se TODOS passarem',contexto:'const arr = [1, 2, 3]',codigo_resp:'arr.every(x => x > 0)',output_resp:'true'},
+  {id:112,type:'structured',cat:'Array',term:'.flat()',metodo_resp:'Método de array (imutável — retorna novo array)',saida_resp:'array — achata arrays aninhados em um nível só',contexto:'const arr = [[1, 2], [3, 4]]',codigo_resp:'arr.flat()',output_resp:'[1, 2, 3, 4]'},
+  {id:201,type:'structured',cat:'String',term:'.split()',metodo_resp:'Método de string',saida_resp:'array — divide string → array',contexto:'const str = "2024-04-28"',codigo_resp:'str.split("-")',output_resp:'["2024", "04", "28"]'},
+  {id:202,type:'structured',cat:'String',term:'.join() via array',metodo_resp:'Método de array (chamado no array, separador como argumento)',saida_resp:'string — une array → string',contexto:'const arr = ["João", "Maria", "Pedro"]',codigo_resp:'arr.join(", ")',output_resp:'"João, Maria, Pedro"'},
+  {id:203,type:'structured',cat:'String',term:'.trim()',metodo_resp:'Método de string (imutável)',saida_resp:'string — sem espaços nas bordas',contexto:'const str = "  oi mundo  "',codigo_resp:'str.trim()',output_resp:'"oi mundo"'},
+  {id:204,type:'structured',cat:'String',term:'.replace()',metodo_resp:'Método de string (imutável)',saida_resp:'string — com a primeira ocorrência substituída',contexto:'const str = "oi mundo"',codigo_resp:'str.replace("mundo", "JS")',output_resp:'"oi JS"'},
+  {id:205,type:'structured',cat:'String',term:'.slice()',metodo_resp:'Método de string (imutável)',saida_resp:'string — trecho recortado pelos índices (início, fim)',contexto:'const str = "javascript"',codigo_resp:'str.slice(0, 4)',output_resp:'"java"'},
+  {id:301,type:'structured',cat:'Object',term:'Object.keys()',metodo_resp:'Método estático de Object',saida_resp:'array de strings — as chaves do objeto',contexto:'const obj = { a: 1, b: 2, c: 3 }',codigo_resp:'Object.keys(obj)',output_resp:'["a", "b", "c"]'},
+  {id:302,type:'structured',cat:'Object',term:'Object.values()',metodo_resp:'Método estático de Object',saida_resp:'array — os valores do objeto',contexto:'const obj = { a: 1, b: 2, c: 3 }',codigo_resp:'Object.values(obj)',output_resp:'[1, 2, 3]'},
+  {id:303,type:'structured',cat:'Object',term:'Object.entries()',metodo_resp:'Método estático de Object',saida_resp:'array de [chave, valor] — todos os pares',contexto:'const obj = { a: 1, b: 2 }',codigo_resp:'Object.entries(obj)',output_resp:'[["a", 1], ["b", 2]]'},
+  {id:401,type:'structured',cat:'JavaScript',term:'new Set()',metodo_resp:'Construtor — coleção de valores únicos',saida_resp:'array sem duplicatas (via spread)',contexto:'const arr = [1, 1, 2, 3, 3]',codigo_resp:'[...new Set(arr)]',output_resp:'[1, 2, 3]'},
+  {id:402,type:'structured',cat:'JavaScript',term:'spread  ...',metodo_resp:'Operador de espalhamento',saida_resp:'array ou object combinado (sem mutar o original)',contexto:'const a = [1, 2];  const b = [3, 4]',codigo_resp:'[...a, ...b]',output_resp:'[1, 2, 3, 4]'},
   {id:501,type:'classic',cat:'Array',term:'Preciso adicionar um produto ao FINAL de um carrinho (array). Qual método uso?',def:'.push()',ex:''},
   {id:502,type:'classic',cat:'Array',term:'Preciso inserir um elemento no INÍCIO de um array, alterando o original. Qual método uso?',def:'.unshift()',ex:''},
   {id:503,type:'classic',cat:'Array',term:'Tenho um array de tarefas do mais antigo ao mais recente e quero invertê-las no mesmo array. Qual método?',def:'.reverse()',ex:''},
@@ -452,29 +325,16 @@ const DEFAULT_CARDS = [
   {id:511,type:'classic',cat:'Array',term:'Preciso verificar se um valor específico existe dentro de um array. Qual método uso?',def:'.includes()',ex:'[1,2,3].includes(2)  →  true'},
   {id:512,type:'classic',cat:'Array',term:'Preciso encontrar o PRIMEIRO elemento que atende a uma condição. Qual método uso?',def:'.find()',ex:'[1,2,3,4].find(x => x > 2)  →  3'},
   {id:513,type:'classic',cat:'Array',term:'Tenho um array com duplicatas e preciso removê-las. Qual é o jeito mais conciso em JS?',def:'[...new Set(array)]',ex:'[...new Set([1,1,2,3])]  →  [1,2,3]'},
-
-  // ══ CLASSIC — Algoritmo ═══════════════════════════════════
-  {id:601,type:'classic',cat:'Algoritmo',term:'Two Pointers — reverter string em JS',
-   def:'Dois índices (esq e dir) que andam um em direção ao outro trocando elementos. O(n) tempo, O(1) espaço.',
-   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}\nreverter("Python")  →  "nohtyP"'},
-
-  {id:602,type:'classic',cat:'Algoritmo',term:'Implemente em JS uma função que reverta uma string sem .reverse(), usando dois índices.',
-   def:'Two Pointers',
-   ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}'},
-
-  // ══ CLASSIC — Async ═══════════════════════════════════════
-  {id:701,type:'classic',cat:'Async',term:'async / await — o que faz?',
-   def:'Pausa a execução até a Promise resolver. Torna código assíncrono legível como síncrono.',
-   ex:'async function buscar() {\n  const res  = await fetch(url);\n  const data = await res.json();\n  return data;\n}'},
-
-  {id:702,type:'classic',cat:'Async',term:'Promise.all() — o que faz?',
-   def:'Executa várias Promises em paralelo e aguarda TODAS terminarem.',
-   ex:'const [a, b] = await Promise.all([\n  fetch(url1),\n  fetch(url2)\n]);'},
+  {id:601,type:'classic',cat:'Algoritmo',term:'Two Pointers — reverter string em JS',def:'Dois índices (esq e dir) que andam um em direção ao outro trocando elementos. O(n) tempo, O(1) espaço.',ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}\nreverter("Python")  →  "nohtyP"'},
+  {id:602,type:'classic',cat:'Algoritmo',term:'Implemente em JS uma função que reverta uma string sem .reverse(), usando dois índices.',def:'Two Pointers',ex:'function reverter(s) {\n  s = s.split("");\n  let esq = 0, dir = s.length - 1;\n  while (esq < dir) {\n    [s[esq], s[dir]] = [s[dir], s[esq]];\n    esq++; dir--;\n  }\n  return s.join("");\n}'},
+  {id:701,type:'classic',cat:'Async',term:'async / await — o que faz?',def:'Pausa a execução até a Promise resolver. Torna código assíncrono legível como síncrono.',ex:'async function buscar() {\n  const res  = await fetch(url);\n  const data = await res.json();\n  return data;\n}'},
+  {id:702,type:'classic',cat:'Async',term:'Promise.all() — o que faz?',def:'Executa várias Promises em paralelo e aguarda TODAS terminarem.',ex:'const [a, b] = await Promise.all([\n  fetch(url1),\n  fetch(url2)\n]);'},
 ];
 
-// ─────────────────────────────────────────────────────────────
 let cards = [], queue = [], wrongList = [], qi = 0, score = {ok:0,nok:0};
 let formType = 'classic';
+// guarda o total da sessão original (sem erros re-adicionados) para barra de progresso
+let sessionTotal = 0;
 
 function load() {
   try { cards = JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { cards = []; }
@@ -501,23 +361,31 @@ function go(tab) {
 }
 
 // ── STUDY ───────────────────────────────────────────────────
+function getSessionSize() {
+  const v = parseInt(document.getElementById('session-size-sel').value);
+  return v; // 0 = todas
+}
+
 function setupStudy() {
   fillCatSels();
   const cat = document.getElementById('study-cat-sel').value;
   const pool = cat==='Todas' ? [...cards] : cards.filter(c=>c.cat===cat);
-  queue = shuffle(pool);
+  const shuffled = shuffle(pool);
+  const size = getSessionSize();
+  // size === 0 significa "todas"; caso contrário pega só N aleatórios
+  queue = (size > 0 && size < shuffled.length) ? shuffled.slice(0, size) : shuffled;
+  sessionTotal = queue.length;
   wrongList = []; qi = 0; score = {ok:0,nok:0};
   updateProgress(); renderStudyMain();
 }
 
 function updateProgress() {
-  const total = queue.length;
-  const pct = total ? Math.round(qi/total*100) : 0;
-  document.getElementById('prog-fill').style.width = pct+'%';
-  document.getElementById('prog-label').textContent = qi+'/'+total;
-  document.getElementById('deck-count').textContent = total+' cards';
+  const pct = sessionTotal ? Math.round(qi / sessionTotal * 100) : 0;
+  document.getElementById('prog-fill').style.width = Math.min(pct, 100) + '%';
+  document.getElementById('prog-label').textContent = Math.min(qi, sessionTotal) + '/' + sessionTotal;
+  document.getElementById('deck-count').textContent = sessionTotal + ' cards';
   const wb = document.getElementById('wrong-count');
-  if (wrongList.length) { wb.style.display=''; wb.textContent=wrongList.length+' pra repetir'; }
+  if (wrongList.length) { wb.style.display=''; wb.textContent = wrongList.length + ' pra repetir'; }
   else wb.style.display='none';
 }
 
@@ -532,7 +400,6 @@ function renderStudyMain() {
   else renderClassicCard(el,c);
 }
 
-// ── CLASSIC CARD ────────────────────────────────────────────
 function renderClassicCard(el, c) {
   el.innerHTML = `
     <div class="card-front-box">
@@ -554,7 +421,6 @@ function renderClassicCard(el, c) {
   document.getElementById('user-ans').focus();
 }
 
-// ── STRUCTURED CARD ─────────────────────────────────────────
 function renderStructuredCard(el, c) {
   el.innerHTML = `
     <div class="card-front-box structured">
@@ -578,7 +444,6 @@ function renderStructuredCard(el, c) {
         </div>
       </div>
     </div>
-
     <div class="struct-back-box" id="back-box">
       <div class="struct-back-row">
         <div class="struct-back-label"><span class="struct-label-num">1</span> Método</div>
@@ -601,7 +466,6 @@ function renderStructuredCard(el, c) {
         </div>
       </div>
     </div>
-
     ${actionsHTML()}`;
   document.getElementById('s-metodo').focus();
 }
@@ -639,19 +503,24 @@ function reveal() {
 }
 
 function answer(ok) {
-  if (ok) score.ok++; else { score.nok++; wrongList.push({...queue[qi]}); }
+  if (ok) score.ok++;
+  else { score.nok++; wrongList.push({...queue[qi]}); }
   qi++;
-  if (qi>=queue.length && wrongList.length) { queue=queue.concat(shuffle(wrongList)); wrongList=[]; }
+  // quando a fila original acabar, appenda os erros embaralhados para repetição
+  if (qi >= queue.length && wrongList.length) {
+    queue = queue.concat(shuffle(wrongList));
+    wrongList = [];
+  }
   renderStudyMain();
 }
 
 function skip() { const c=queue.splice(qi,1)[0]; queue.push(c); renderStudyMain(); }
 
 function renderScore(el) {
-  const total = score.ok+score.nok;
-  const pct   = total ? Math.round(score.ok/total*100) : 100;
-  document.getElementById('prog-fill').style.width='100%';
-  el.innerHTML=`<div class="score-card">
+  const total = score.ok + score.nok;
+  const pct   = total ? Math.round(score.ok / total * 100) : 100;
+  document.getElementById('prog-fill').style.width = '100%';
+  el.innerHTML = `<div class="score-card">
     <div class="score-big">${pct}%</div>
     <div class="score-label">de acerto — ${total} respostas no total</div>
     <div class="score-row">
@@ -670,9 +539,7 @@ function renderList() {
   const el = document.getElementById('card-list');
   if (!filtered.length) { el.innerHTML=`<div class="empty-state">Nenhum card aqui.</div>`; return; }
   el.innerHTML = filtered.map(c=>{
-    const preview = c.type==='structured'
-      ? `${c.metodo_resp} · ${c.saida_resp}`
-      : (c.def||'');
+    const preview = c.type==='structured' ? `${c.metodo_resp} · ${c.saida_resp}` : (c.def||'');
     return `<div class="card-row">
       <span class="cr-type">${c.type==='structured'?'struct':'recall'}</span>
       <span class="cr-term">${esc(c.term)}</span>
